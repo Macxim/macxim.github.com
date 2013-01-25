@@ -1,4 +1,5 @@
 macxim.github.com
 =================
 
-My site
+#Next step:
+- Disqus comment?
