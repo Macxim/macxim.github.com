@@ -1,0 +1,55 @@
+/*------------------------------------*\
+	$PAGE
+\*------------------------------------*/
+html{
+	font-family: PTSans, 'Lucida Grande', 'Lucida Sans Unicode', Lucida, sans-serif;
+
+	color: #FFF;
+}
+body{
+	background-color: $brand-2nd-color;
+	padding-top:$base-spacing-unit;
+	border-top: $base-spacing-unit solid $brand-color;
+	-webkit-font-smoothing:antialiased;
+	}
+.wrapper{
+	max-width:1200px;
+	margin-right:auto;
+	margin-left: auto;
+	padding-right:$base-spacing-unit*3;
+	padding-left:$base-spacing-unit*3;
+	
+		@include media-query(portable){
+		padding-right:$half-spacing-unit;
+		padding-left: $half-spacing-unit;
+		max-width:640px;
+		}
+	}
+.page-head{
+    @extend .cf;
+    margin-bottom: $base-spacing-unit;
+	}
+.page-content{
+	min-height: $base-spacing-unit*12;
+	}
+.page-foot{
+	margin-top: $base-spacing-unit;
+	background-color: $brand-color;
+	color: $brand-2nd-color;
+	}
+.posts{ text-align: right; }
+.post__tags{
+		& .loz{
+			background-color: $brand-color;
+			color: $brand-2nd-color;
+			&:hover{
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+.rule{
+	color: lighten($brand-2nd-color,10);
+	}
+.position{ display:block; }
+
