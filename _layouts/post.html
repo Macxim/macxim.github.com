@@ -2,9 +2,11 @@
 layout: default
 ---
 <article class="post">
-    <span class="post__time">{{ page.date | date: "%d %B, %Y" }}</span> &mdash; <span class="post__tags">
+    <span class="post__time">{{ page.date | date: "%d %B, %Y" }}</span>
+    <!-- &mdash; <span class="post__tags">
 		{% for tag in page.tags %}
 		<small><a class="loz" href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a></small>  {% if forloop.last != true %} {% endif %} {% endfor %}
+	-->
 	</span>
     <h1>{{ page.title }}</h1>
     {{ content }}

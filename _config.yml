@@ -3,5 +3,4 @@ server: true
 pygments: true
 markdown: rdiscount
 permalink: /:year/:month/:title
-searchindex: yes
 paginate: 4
