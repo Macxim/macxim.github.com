@@ -2,4 +2,4 @@ macxim.github.com
 =================
 
 #Next step:
-- Disqus comment?
+- Find a way to make plugins work.
