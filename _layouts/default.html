@@ -8,9 +8,10 @@
 		<title>{{ page.title }} &ndash; Maxime Laforet &ndash; Front-End Developer</title>
 
 		<meta property="og:title" content="{{ page.title }}"/>
-    	<meta property="og:url" content="http://maximelaforet.com/{{ page.url }}"/>
-    	<meta property="og:image" content="http://maximelaforet.com/icon.png"/>
+    	<meta property="og:url" content="http://maximelaforet.com{{ page.url }}"/>
+    	<meta property="og:image" content="http://maximelaforet.com/logo_200.png"/>
     	<meta property="og:site_name" content="Maxime Laforet - Front-End Developer"/>
+    	<meta property="og:description" content="{{ page.title }} - {{ post.content | strip_html | truncatewords: 25 }} " />
 		<link rel="stylesheet" href="/assets/css/ml.min.css">
 		
 		<link rel="shortcut icon" href="/icon.png">
