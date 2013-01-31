@@ -16,7 +16,7 @@
 		{% if page.title == "Home" %}
 		<meta property="og:description" content="This is the personal website of Maxime Laforet, Front-End Developer currently working at Spade, a small yet dynamic communication agency specialized in branding, communication strategy, design and technology.">
 		{% else %}
-		<meta property="og:description" content="{{ page.content | truncatewords: 35 }} ">
+		<meta property="og:description" content="{{ page.title }} ">
 		{% endif %}
 
 		<link rel="stylesheet" href="/assets/css/ml.min.css">
