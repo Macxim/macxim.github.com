@@ -1,0 +1,17 @@
+.site-nav{
+	@extend .fr;
+	line-height: 100px;
+	font-family: 'Alegreya', Georgia, serif;
+	font-weight: bold;
+	text-transform: uppercase;
+		> li{
+		margin-left:$half-spacing-unit;
+	}
+		a{
+			color:$brand-color;
+			&:hover{
+				color:$white;
+				text-decoration:none;
+			}
+		}
+	}

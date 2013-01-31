@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE HTML>
 
 <html lang="en">
@@ -6,17 +5,19 @@
 		<meta charset="UTF-8">
 		<meta name="author" content="Maxime Laforet - @Macxim" />
 		
-		<title>Home &ndash; Maxime Laforet &ndash; Front-End Developer</title>
+		<title>{{ page.title }} &ndash; Maxime Laforet &ndash; Front-End Developer</title>
 
-    	<meta property="og:url" content="http://maximelaforet.com/index.html"/>
+    	<meta property="og:url" content="http://maximelaforet.com{{ page.url }}"/>
     	<meta property="og:image" content="http://maximelaforet.com/logo_200.png"/>
     	<meta property="og:site_name" content="Maxime Laforet - Front-End Developer"/>
 		
 		
-		<meta property="og:title" content="Home">
-		
+		<meta property="og:title" content="{{ page.title }}">
+		{% if page.title == "Home" %}
 		<meta property="og:description" content="This is the personal website of Maxime Laforet, Front-End Developer currently working at Spade, a small yet dynamic communication agency specialized in branding, communication strategy, design and technology.">
-		
+		{% else %}
+		<meta property="og:description" content="{{ page.content | truncatewords: 35 }} ">
+		{% endif %}
 
 		<link rel="stylesheet" href="/assets/css/ml.min.css">
 		
@@ -32,10 +33,10 @@
 			<header class="page-head">
 				<a href="/" class="site-logo">M</a>
 				<ul class="nav  site-nav">
-					<li class="site-nav__home current">Home</li>
-					<li class="site-nav__about "><a href="/about/" title="About">About</a>
+					<li class="site-nav__home {% if page.title == "Home" %}current{% endif %}">{% if page.title == "Home" %}Home{% else %}<a href="/" title="Home">Home</a>{% endif %}</li>
+					<li class="site-nav__about {% if page.title == "About" %}current{% endif %}">{% if page.title == "About" %}About{% else %}<a href="/about/" title="About">About</a>{% endif %}
 					</li>
-					<!--<li class="site-nav__projects "><a href="/projects/" title="Projects">Projects</a></li>-->
+					<!--<li class="site-nav__projects {% if page.title == "Projects" %}current{% endif %}">{% if page.title == "Projects" %}Projects{% else %}<a href="/projects/" title="Projects">Projects</a>{% endif %}</li>-->
 				</ul>
 			</header>
 			
@@ -69,28 +70,13 @@
 					</p>
 				</div>
 				<div class="g one-whole desk-three-quarters">
-					<section class="posts">
-	
-	<span class="post__tags">
-		
-		<small><a class="loz" href="/tags/jekyll" title="View posts tagged with &quot;jekyll&quot;">jekyll</a></small>    
-		<small><a class="loz" href="/tags/development" title="View posts tagged with &quot;development&quot;">development</a></small>    
-		<small><a class="loz" href="/tags/web" title="View posts tagged with &quot;web&quot;">web</a></small>   
-	</span> &mdash;
-	<span class="post__time">25 January, 2013</span> 
-	<h2 class="post__title"><a href="/2013/01/new-website-hello-jekyll">New website, Hello Jekyll!</a></h2>
-	<hr class="rule  rule--dotted">
-	
-	
-</section>
-
-
+					{{ content }}
 				</div>
 			</div>
 		</div>
 		<footer class="page-foot">
 			<div class="wrapper">
-				<p class="proceed milli"><small>&copy; 2013 &dash; Maxime Laforet.</small></p>
+				<p class="proceed milli"><small>&copy; {{ 'now' | date: "%Y" }} &dash; Maxime Laforet.</small></p>
 			</div>
 		</footer>
 	<script type="text/javascript">
@@ -116,46 +102,3 @@
     </script>
 	</body>
 </html>
-=======
----
-layout: default
-title: Home
----
-
-<section class="posts">
-	{% for post in paginator.posts %}
-	<span class="post__tags">
-		{% for tag in post.tags %}
-		<small><a class="loz" href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a></small>  {% if forloop.last != true %} {% endif %} {% endfor %}
-	</span> &mdash;
-	<span class="post__time">{{ post.date | date: "%d %B, %Y" }}</span> 
-	<h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	<hr class="rule  rule--dotted">
-	
-	{% endfor %}
-</section>
-
-{% if paginator.post > 2 %}
-<ol class="nav  pagination">
-	<li class="pagination__prev">
-		{% if paginator.previous_page %}
-		{% if paginator.previous_page == 1 %}
-			<a href="/">Previous</a>
-		{% else %}
-			<a href="/page{{paginator.previous_page}}">Previous</a>
-		{% endif %}
-		{% else %}
-			Previous
-		{% endif %}
-	</li><!--
-	
- --><li class="pagination__next">
-		{% if paginator.next_page %}
-			<a href="/page{{paginator.next_page}}">Next</a>
-		{% else %}
-			Next
-		{% endif %}
-	</li>
-</ol>
-{% endif %}
->>>>>>> 89776abca6ff67cd386f49ead0975559e3f4cf2f

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE HTML>
 
 <html lang="en">
@@ -6,16 +5,16 @@
 		<meta charset="UTF-8">
 		<meta name="author" content="Maxime Laforet - @Macxim" />
 		
-		<title>Home &ndash; Maxime Laforet &ndash; Front-End Developer</title>
+		<title>About &ndash; Maxime Laforet &ndash; Front-End Developer</title>
 
-    	<meta property="og:url" content="http://maximelaforet.com/index.html"/>
+    	<meta property="og:url" content="http://maximelaforet.com/about/"/>
     	<meta property="og:image" content="http://maximelaforet.com/logo_200.png"/>
     	<meta property="og:site_name" content="Maxime Laforet - Front-End Developer"/>
 		
 		
-		<meta property="og:title" content="Home">
+		<meta property="og:title" content="About">
 		
-		<meta property="og:description" content="This is the personal website of Maxime Laforet, Front-End Developer currently working at Spade, a small yet dynamic communication agency specialized in branding, communication strategy, design and technology.">
+		<meta property="og:description" content="# About me Hello, I'm Maxime Laforet. I am a French Front-End Developer based in Brussels, Belgium. ## Work I'm currently working at [Spade](http://spade.be), a small yet dynamic communication agency specialized in branding, communication strategy,... ">
 		
 
 		<link rel="stylesheet" href="/assets/css/ml.min.css">
@@ -32,8 +31,8 @@
 			<header class="page-head">
 				<a href="/" class="site-logo">M</a>
 				<ul class="nav  site-nav">
-					<li class="site-nav__home current">Home</li>
-					<li class="site-nav__about "><a href="/about/" title="About">About</a>
+					<li class="site-nav__home "><a href="/" title="Home">Home</a></li>
+					<li class="site-nav__about current">About
 					</li>
 					<!--<li class="site-nav__projects "><a href="/projects/" title="Projects">Projects</a></li>-->
 				</ul>
@@ -69,21 +68,21 @@
 					</p>
 				</div>
 				<div class="g one-whole desk-three-quarters">
-					<section class="posts">
-	
-	<span class="post__tags">
-		
-		<small><a class="loz" href="/tags/jekyll" title="View posts tagged with &quot;jekyll&quot;">jekyll</a></small>    
-		<small><a class="loz" href="/tags/development" title="View posts tagged with &quot;development&quot;">development</a></small>    
-		<small><a class="loz" href="/tags/web" title="View posts tagged with &quot;web&quot;">web</a></small>   
-	</span> &mdash;
-	<span class="post__time">25 January, 2013</span> 
-	<h2 class="post__title"><a href="/2013/01/new-website-hello-jekyll">New website, Hello Jekyll!</a></h2>
-	<hr class="rule  rule--dotted">
-	
-	
-</section>
+					<h1>About me</h1>
 
+<p>Hello, I'm Maxime Laforet. I am a French Front-End Developer based in Brussels, Belgium.</p>
+
+<h2>Work</h2>
+
+<p>I'm currently working at <a href="http://spade.be">Spade</a>, a small yet dynamic communication agency specialized in branding, communication strategy, design and technology.</p>
+
+<h2>Contact</h2>
+
+<p>Write me an <a href="mailto:contact@maximelaforet.com">email</a>. Say "Hi!" on <a href="http://twitter.com/?status=Hi!,%20@macxim%20">Twitter</a> or report a <a href="https://github.com/macxim/macxim.github.com/issues">Github Issue</a> about this website.</p>
+
+<h3>About the website</h3>
+
+<p>It was made with <a href="https://github.com/mojombo/jekyll">Jekyll</a> and was built thanks to <a href="http://inuitcss.com/">inuit.css</a>, a free and open-source CSS framework developed and maintained by <a href="http://twitter.com/csswizardry">Harry Roberts</a>. The <a href="http://www.entypo.com/">Entypo pictograms</a> are by Daniel Bruce. The font combination is <a href="http://www.fontsquirrel.com/fonts/alegreya">Alegreya</a> and <a href="http://www.fontsquirrel.com/fonts/PT-Sans">PTSans</a>.</p>
 
 				</div>
 			</div>
@@ -116,46 +115,3 @@
     </script>
 	</body>
 </html>
-=======
----
-layout: default
-title: Home
----
-
-<section class="posts">
-	{% for post in paginator.posts %}
-	<span class="post__tags">
-		{% for tag in post.tags %}
-		<small><a class="loz" href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a></small>  {% if forloop.last != true %} {% endif %} {% endfor %}
-	</span> &mdash;
-	<span class="post__time">{{ post.date | date: "%d %B, %Y" }}</span> 
-	<h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	<hr class="rule  rule--dotted">
-	
-	{% endfor %}
-</section>
-
-{% if paginator.post > 2 %}
-<ol class="nav  pagination">
-	<li class="pagination__prev">
-		{% if paginator.previous_page %}
-		{% if paginator.previous_page == 1 %}
-			<a href="/">Previous</a>
-		{% else %}
-			<a href="/page{{paginator.previous_page}}">Previous</a>
-		{% endif %}
-		{% else %}
-			Previous
-		{% endif %}
-	</li><!--
-	
- --><li class="pagination__next">
-		{% if paginator.next_page %}
-			<a href="/page{{paginator.next_page}}">Next</a>
-		{% else %}
-			Next
-		{% endif %}
-	</li>
-</ol>
-{% endif %}
->>>>>>> 89776abca6ff67cd386f49ead0975559e3f4cf2f

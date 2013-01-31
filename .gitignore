@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 .DS_Store
 _site/
+=======
+.sass-cache/
+.DS_Store
+>>>>>>> 89776abca6ff67cd386f49ead0975559e3f4cf2f
