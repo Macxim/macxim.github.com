@@ -3,7 +3,6 @@ comments: true
 date: 2013-01-25
 layout: post
 title: New website, Hello Jekyll!
-tags: jekyll development web
 ---
 
 I finally had some time to work on my website. I made the decision to switch from Wordpress to [Jekyll](https://github.com/mojombo/jekyll/). The main reason is that I wanted to learn something new. I started reading a lot of articles about Jekyll and I thought: "Why not give it a go?".
