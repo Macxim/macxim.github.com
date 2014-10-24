@@ -1,104 +1,56 @@
-<!DOCTYPE HTML>
+---
+layout: typo
+---
+<!doctype html>
+<html lang="{{ page.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="author" content="Maxime Laforet - @Macxim" />
-		
-		<title>{{ page.title }} &ndash; Maxime Laforet &ndash; Front-End Developer</title>
+    <meta name="description" content="{% if page.type == 'pages' %}{{ site.t[page.lang].description }}{% else %}{{ page.excerpt | strip_html | replace: "[[", " ("  | replace: "]]", ")" }}{% endif %}">
 
-    	<meta property="og:url" content="http://maximelaforet.com{{ page.url }}"/>
-    	<meta property="og:image" content="http://maximelaforet.com/logo_200.png"/>
-    	<meta property="og:site_name" content="Maxime Laforet - Front-End Developer"/>
-		
-		
-		<meta property="og:title" content="{{ page.title }}">
-		{% if page.title == "Home" %}
-		<meta property="og:description" content="This is the personal website of Maxime Laforet, Front-End Developer currently working at Spade, a small yet dynamic communication agency specialized in branding, communication strategy, design and technology.">
-		{% else %}
-		<meta property="og:description" content="{{ page.title }} ">
-		{% endif %}
+    <title>{{page.title | strip_html}} – Maxime Laforet</title>
 
-		<link rel="stylesheet" href="/assets/css/ml.min.css">
-		
-		<link rel="shortcut icon" href="/icon.png">
-		<meta name="description" content="Maxime Laforet, a French Front-End Developer based in Brussels.">
+    <link rel="icon" href="/assets/img/favicon.ico" />
 
-		<script src="/assets/js/modernizr.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-	</head>
+    {% assign posts=site.posts | where:"date", page.date %}
+    {% for post in posts %}
+      {% if post.lang != page.lang %}
+        <link rel="alternate" hreflang="{{post.lang}}" href="{{post.url}}" />
+      {% endif %}
+    {% endfor %}
 
-	<body>
-		<div class="wrapper">
-			<header class="page-head">
-				<a href="/" class="site-logo">M</a>
-				<ul class="nav  site-nav">
-					<li class="site-nav__home {% if page.title == "Home" %}current{% endif %}">{% if page.title == "Home" %}Home{% else %}<a href="/" title="Home">Home</a>{% endif %}</li>
-					<li class="site-nav__about {% if page.title == "About" %}current{% endif %}">{% if page.title == "About" %}About{% else %}<a href="/about/" title="About">About</a>{% endif %}
-					</li>
-					<!--<li class="site-nav__projects {% if page.title == "Projects" %}current{% endif %}">{% if page.title == "Projects" %}Projects{% else %}<a href="/projects/" title="Projects">Projects</a>{% endif %}</li>-->
-				</ul>
-			</header>
-			
-			<div class="gw page-content">
-				<div class="g one-whole desk-one-quarter">
-					<div class="animate-wrap fl">  
-						<input type="radio" id="ani-1" name="animation" checked>
-						<input type="radio" id="ani-2" name="animation">
-						
-						<div class="animate ml">
-							<label for="ani-2" class="front">
-								<div class="front-content ml"></div>
-							</label>
-							
-							<label for="ani-1" class="back">
-								<div class="back-content ml">
-						   			<div class="social">
-						   				<ul class="networks">
-						   					<li><a href="//twitter.com/Macxim" title="Maxime Laforet — @Macxim on Twitter"><i class="icon entypo-twitter"></i></a></li>
-						   					<li><a href="//github.com/Macxim" title="Macxim on Github"><i  class="icon entypo-github"></i></a></li>
-						   					<li><a href="//fr.linkedin.com/in/maximelaforet/" title="Maxime Laforet on LinkedIn"><i  class="icon entypo-linkedin"></i></a></li>
-						   					<li><a href="//facebook.com/maxime.laforet" title="Maxime Laforet on Facebook"><i  class="icon entypo-facebook"></i></a></li>
-						   				</ul>
-						   			</div>
-								</div>
-							</label>
-						</div>
-					</div>
-					<p class="text-center">Maxime Laforet
-						<span class="milli position">Front-End Developer @ <a href="" title="Spade - Communication Agency">Spade</a></span>
-					</p>
-				</div>
-				<div class="g one-whole desk-three-quarters">
-					{{ content }}
-				</div>
-			</div>
-		</div>
-		<footer class="page-foot">
-			<div class="wrapper">
-				<p class="proceed milli"><small>&copy; {{ 'now' | date: "%Y" }} &dash; Maxime Laforet.</small></p>
-			</div>
-		</footer>
-	<script type="text/javascript">
-		jQuery(document).ready(function($){
-			if (!Modernizr.csstransforms3d) {
-    			$('label').click(function() {
-        		$('.animate .front').removeClass('front');
-        		$(this).addClass('front');
-    		});
-		}
-		});
-	</script>
-	<script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-27476296-1']);
-    _gaq.push(['_trackPageview']);
-    
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-	</body>
+    <link rel="alternate" href="/rss.xml" type="application/rss+xml" />
+    <link rel="stylesheet" href="_/assets/css/ml.min.css">
+  </head>
+
+  <body>
+
+    <ul class="">
+      {% for menu in site.nav[page.lang] %}
+        <li><a href="{{ menu[1].url }}">{{ menu[1].title }}</a></li>
+      {% endfor %}
+      <li class="lang">
+        {% assign posts=site.posts | where:"name", page.name | sort: 'path' %}
+        {% for post in posts %}
+          <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+        {% endfor %}
+      </li>
+    </ul>
+
+    <h1>{{ page.title }}</h1>
+
+    <article class="article">
+      {% if page.type != 'pages' %}
+      <p class="date">
+          {% include date.html date=page.date %}
+      </p>
+      {% endif %}
+
+      {{ content }}
+      <hr/>
+    </article>
+
+  <script>{% include script.js %}</script>
+  </body>
 </html>

@@ -1,6 +1,55 @@
-auto: true
-server: true
-pygments: true
-markdown: rdiscount
-permalink: /:year/:month/:title
-paginate: 4
+permalink: /:title/
+markdown: redcarpet
+redcarpet:
+  extensions: ['smart', 'superscript']
+gems:
+  - jekyll-redirect-from
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      lang: en
+      layout: default
+  -
+    scope:
+      path: _posts/fr
+    values:
+      lang: fr
+  -
+    scope:
+      path: _posts/es
+    values:
+      lang: es
+nav:
+  en:
+    logo:
+      title: "Macxim"
+      url:   "/"
+    blog:
+      title: "Blog"
+      url:   "/index.html"
+    about:
+      title: "About"
+      url:   "/about/"
+  fr:
+    logo:
+      title: "Macxim"
+      url:   "/notes/"
+    blog:
+      title: "Notes"
+      url:   "/notes/"
+    about:
+      title: "À propos"
+      url:   "/a-propos/"
+  es:
+    logo:
+      title: "Macxim"
+      url:   "/notas/"
+    blog:
+      title: "Notas"
+      url:   "/notas/"
+    about:
+      title: "Sobre mí"
+      url:   "/sobre-mi/"
