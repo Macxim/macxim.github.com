@@ -13,7 +13,7 @@ gulp.task('default', function() {
           ]
         },
         autoprefixer: {
-          browsers: ["> 1%", "last 2 versions", "Firefox ESR"]
+          browsers: ["last 2 versions"]
         }
       }
     }))
