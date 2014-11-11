@@ -1,0 +1,26 @@
+{
+  "name": "macxim.github.com",
+  "version": "0.1.0",
+  "description": "Personal website of Maxime Laforet",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "cssrecipes-defaults": "^0.4.0",
+    "cssrecipes-grid": "^0.1.0",
+    "cssrecipes-reset": "^0.4.0",
+    "cssrecipes-utils": "^0.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Macxim/macxim.github.com"
+  },
+  "author": "Maxime Laforet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Macxim/macxim.github.com/issues"
+  },
+  "homepage": "https://github.com/Macxim/macxim.github.com"
+}
