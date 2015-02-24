@@ -1,9 +1,11 @@
 permalink: /:title/
 markdown: redcarpet
 redcarpet:
-  extensions: ['smart', 'superscript']
+  extensions: ['smart', 'superscript', 'strikethrough']
 gems:
   - jekyll-redirect-from
+
+exclude: ["assets/node_modules"]
 
 defaults:
   -
@@ -24,19 +26,13 @@ defaults:
       lang: es
 nav:
   en:
-    logo:
-      title: "Macxim"
-      url:   "/"
     blog:
-      title: "Blog"
-      url:   "/index.html"
+      title: "Notes"
+      url:   "/"
     about:
       title: "About"
       url:   "/about/"
   fr:
-    logo:
-      title: "Macxim"
-      url:   "/notes/"
     blog:
       title: "Notes"
       url:   "/notes/"
@@ -44,12 +40,23 @@ nav:
       title: "À propos"
       url:   "/a-propos/"
   es:
-    logo:
-      title: "Macxim"
-      url:   "/notas/"
     blog:
       title: "Notas"
       url:   "/notas/"
     about:
       title: "Sobre mí"
       url:   "/sobre-mi/"
+
+t:
+  en:
+    title: "Personal website of Maxime Laforet"
+    url:   "/"
+    photoCredit: "Photography:"
+  fr:
+    title: "Site web personnel de Maxime Laforet"
+    url:   "/notes/"
+    photoCredit: "Photographie :"
+  es:
+    title: "Web personal de Maxime Laforet"
+    url:   "/notas/"
+    photoCredit: "Fotografía:"
