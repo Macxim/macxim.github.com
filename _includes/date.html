@@ -2,6 +2,8 @@
   {% assign d = include.date | date: "%-d" %}
   {% if page.lang == 'fr' %}
     {{ d }}{% if d == "1" %}<sup>er</sup>{% endif %}
+  {% elsif page.lang == 'es' %}
+    {{ d }} de
   {% else %}
     {{ d }}<sup>{% case d %}
       {% when '1' or '21' or '31' %}st
@@ -47,6 +49,8 @@
 {% else %}
   {{ include.date | date: "%B"}}
 {% endif %}
-{{ include.date | date: "%Y"}}
-
-
+{% if page.lang == 'es' %}
+  de {{ include.date | date: "%Y"}}
+{% else %}
+  {{ include.date | date: "%Y"}}
+{% endif %}
