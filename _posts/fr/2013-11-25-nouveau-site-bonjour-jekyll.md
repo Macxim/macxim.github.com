@@ -3,17 +3,16 @@ title: Nouveau site, bonjour Jekyll !
 name: hello
 ---
 
-I finally had some time to work on my website. I made the decision to switch from Wordpress to [Jekyll](https://github.com/mojombo/jekyll/). The main reason is that I wanted to learn something new. I started reading a lot of articles about Jekyll and I thought: "Why not give it a go?".
+J'ai finalement trouvé un peu de temps pour travailler sur mon site web. J'ai décidé de passer de WordPress à [Jekyll](https://github.com/mojombo/jekyll/). La principale raison à cela est que je voulais apprendre quelque chose de nouveau. J'ai commencé à lire pas mal d'articles sur Jekyll et j'ai pensé : "Pourquoi pas?"
 
-I decided to start from scratch without migrating the previous articles. So, in advance, sorry for the people who commented or twitted the articles but for now, they are all dead.
+J'ai décidé de partir de zéro sans migrer les articles précédents. Désolé pour ceux qui avaient commenté ou twitté ces articles mais pour le moment, ils ont disparu.
 
-As expected, building a blog with Jekyll is **easy and fast**. Even I was able to make it work.
+Comme je m'y attendais, construire un blog avec Jekyll est **facile et rapide**. Même moi j'ai réussi.
 
-I also took the opportunity to *redesign* the website a bit with a new layout and a simple logo (as you could have guessed, I'm not a designer).
+J'en ai aussi profité pour *redesigné* un peu le site avec un nouveau *layout* et un logo simple (comme vous l'aurez deviné, je ne suis pas designer).
 
-For the record, I would like to remind you that this blog is [hosted on Github](https://github.com/macxim/macxim.github.com/), and therefore [http://macxim.github.com/](http://macxim.github.com/) redirects to [http://maximelaforet.com](http://maximelaforet.com). Isn't it great?
+Pour information, ce site est [hébergé on GitHub](https://github.com/macxim/macxim.github.com/), et [http://macxim.github.com/](http://macxim.github.com/) redirige donc vers [http://macx.im](http://macx.im). C'est pas beau ça ?
 
-Then, remember you can always [open an issue](https://github.com/macxim/macxim.github.com/issues) if you notice something weird.
+Si vous voulez apporter une correction, vous pouvez toujours [ouvrir une issue](https://github.com/macxim/macxim.github.com/issues).
 
-Now it just needs some content. Let's see if I have interesting things to say...
-
+Maintenant j'ai juste besoin d'un peu de contenu. Voyons voir si j'ai des choses intéressantes à dire...

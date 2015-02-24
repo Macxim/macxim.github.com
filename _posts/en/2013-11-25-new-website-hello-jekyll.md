@@ -1,5 +1,5 @@
 ---
-title: New website, Hello Jekyll!
+title: New website, hello Jekyll!
 name: hello
 ---
 

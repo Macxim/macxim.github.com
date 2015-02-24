@@ -3,17 +3,16 @@ title: Nueva página, ¡hola Jekyll!
 name: hello
 ---
 
-I finally had some time to work on my website. I made the decision to switch from Wordpress to [Jekyll](https://github.com/mojombo/jekyll/). The main reason is that I wanted to learn something new. I started reading a lot of articles about Jekyll and I thought: "Why not give it a go?".
+Por fin he tenido algo de tiempo para trabajar en mi página. Al final me decidí a pasar de WordPress a [Jekyll](https://github.com/mojombo/jekyll/). Después de leer un montón de artículos sobre Jekyll, pensé: "¿Por qué no?". La razón principal es que quería aprender algo nuevo.
 
-I decided to start from scratch without migrating the previous articles. So, in advance, sorry for the people who commented or twitted the articles but for now, they are all dead.
+Decidí empezar desde cero sin migrar los artículos antiguos. Me disculpo de antemano con la gente que comentó o tuiteó aquellos artículos porque ya no existen.
 
-As expected, building a blog with Jekyll is **easy and fast**. Even I was able to make it work.
+Como era de esperar, construir un blog con Jekyll es **fácil y rápido**. Hasta yo pude hacerlo.
 
-I also took the opportunity to *redesign* the website a bit with a new layout and a simple logo (as you could have guessed, I'm not a designer).
+Aproveché esta oportunidad para *rediseñar* la página un poco con un nuevo *layout* y un logo sencillo (como habrán podido adivinar, no soy diseñador).
 
-For the record, I would like to remind you that this blog is [hosted on Github](https://github.com/macxim/macxim.github.com/), and therefore [http://macxim.github.com/](http://macxim.github.com/) redirects to [http://maximelaforet.com](http://maximelaforet.com). Isn't it great?
+Para vuestra información, esta página está [alojada en GitHub](https://github.com/macxim/macxim.github.com/) y, por lo tanto, [http://macxim.github.com/](http://macxim.github.com/) redirige hacia [http://macx.im](http://macx.im). ¿A que es genial?
 
-Then, remember you can always [open an issue](https://github.com/macxim/macxim.github.com/issues) if you notice something weird.
+Recuerda que siempre puedes [abrir una issue](https://github.com/macxim/macxim.github.com/issues) si notas algo raro en la página.
 
-Now it just needs some content. Let's see if I have interesting things to say...
-
+Ahora solo necesito algo más de contenido. Ya veremos si tengo algo interesante que decir...
