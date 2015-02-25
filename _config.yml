@@ -5,7 +5,7 @@ redcarpet:
 gems:
   - jekyll-redirect-from
 
-exclude: ["assets/node_modules"]
+exclude: ["assets/node_modules", "vendor"]
 
 defaults:
   -
