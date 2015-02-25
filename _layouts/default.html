@@ -58,7 +58,7 @@ layout: typo
     </div>
     <div class="page__photo-credit">
       {% if photoCreditUrl != empty %}
-        <a href="{{ page.photoCreditUrl }}">{{ site.t[page.lang].photoCredit }} {{ page.photoCreditName }}</a>
+        <a href="{{ page.photoCreditUrl }}" target="_blank">{{ site.t[page.lang].photoCredit }} {{ page.photoCreditName }}</a>
       {% else %}
         <span>{{ site.t[page.lang].photoCredit }} {{ page.photoCreditName }}</span>
       {% endif %}
