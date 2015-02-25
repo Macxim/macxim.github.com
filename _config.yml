@@ -1,6 +1,62 @@
-auto: true
-server: true
-pygments: true
-markdown: rdiscount
-permalink: /:year/:month/:title
-paginate: 4
+permalink: /:title/
+markdown: redcarpet
+redcarpet:
+  extensions: ['smart', 'superscript', 'strikethrough']
+gems:
+  - jekyll-redirect-from
+
+exclude: ["assets/node_modules", "vendor"]
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      lang: en
+      layout: default
+  -
+    scope:
+      path: _posts/fr
+    values:
+      lang: fr
+  -
+    scope:
+      path: _posts/es
+    values:
+      lang: es
+nav:
+  en:
+    blog:
+      title: "Notes"
+      url:   "/"
+    about:
+      title: "About"
+      url:   "/about/"
+  fr:
+    blog:
+      title: "Notes"
+      url:   "/notes/"
+    about:
+      title: "À propos"
+      url:   "/a-propos/"
+  es:
+    blog:
+      title: "Notas"
+      url:   "/notas/"
+    about:
+      title: "Sobre mí"
+      url:   "/sobre-mi/"
+
+t:
+  en:
+    title: "Personal website of Maxime Laforet"
+    url:   "/"
+    photoCredit: "Photography:"
+  fr:
+    title: "Site web personnel de Maxime Laforet"
+    url:   "/notes/"
+    photoCredit: "Photographie :"
+  es:
+    title: "Web personal de Maxime Laforet"
+    url:   "/notas/"
+    photoCredit: "Fotografía:"

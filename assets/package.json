@@ -1,0 +1,29 @@
+{
+  "name": "macxim.github.com",
+  "version": "0.1.0",
+  "description": "Personal website of Maxime Laforet",
+  "devDependencies": {
+    "cssrecipes-custom-media-queries": "^0.3.0",
+    "cssrecipes-defaults": "^0.4.0",
+    "cssrecipes-grid": "^0.4.0",
+    "cssrecipes-utils": "^0.4.3",
+    "cssrecipes-vertical-rhythm": "^0.5.0",
+    "gulp": "^3.8.10",
+    "gulp-cssnext": "^0.4.0",
+    "gulp-watch": "^1.1.0",
+    "normalize.css": "^3.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Macxim/macxim.github.com"
+  },
+  "author": "Maxime Laforet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Macxim/macxim.github.com/issues"
+  },
+  "homepage": "https://github.com/Macxim/macxim.github.com"
+}
