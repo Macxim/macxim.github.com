@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/Macxim/macxim.github.io.svg)](https://gemnasium.com/Macxim/macxim.github.io)
+
 # Introduction
 
 This is the uncompiled code of [http://macx.im](http://macx.im).
