@@ -377,6 +377,7 @@ th {
 }
 .r-ResetInput {
   border: none;
+  font-family: inherit;
 }
 .r-ResetInput::-moz-focus-inner {
   padding: 0;
@@ -644,8 +645,6 @@ th {
   right: 0;
   bottom: 0;
   left: 0;
-
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .25) 1px, transparent 1px) 0 0 / 100% 1.5625rem, -webkit-linear-gradient(top, rgba(0, 0, 0, 0.16749999999999998), transparent 1px) 0 0.78125rem / 100% 1.5625rem, -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 0.39063rem / 100% 1.5625rem, -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 1.17188rem / 100% 1.5625rem;
 
   background: linear-gradient(to bottom, rgba(0, 0, 0, .25) 1px, transparent 1px) 0 0 / 100% 1.5625rem,
     linear-gradient(to bottom, rgba(0, 0, 0, 0.16749999999999998), transparent 1px) 0 0.78125rem / 100% 1.5625rem,
@@ -1381,7 +1380,6 @@ h1,h2,h3,h4,h5,h6{
   width: 100%;
   height: 100%;
   margin: -1rem;
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.6) 10%, rgb(255, 255, 255) 100%);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 10%, rgb(255, 255, 255) 100%);
 }
 
@@ -1390,11 +1388,10 @@ a:visited {
   position: relative;
   color: rgb(232, 97, 0);
   text-decoration: underline;
-  -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 a:hover{
-  color: rgb(55, 129, 140);
+  color: rgb(0, 135, 232);
 }
 
 .site-logo{
@@ -1472,6 +1469,7 @@ a:hover{
 }
   .jumbotron__title{
     position: relative;
+    padding: 0 1rem;
     margin-top: -4rem;
     font-size: 3.1104rem;
     line-height: 4.6875rem;
@@ -1510,7 +1508,7 @@ a:hover{
 
 .post-date{
   text-align: center;
-  color: #37818C;
+  color: #0087e8;
   font-size: 0.864rem;
 }
 
@@ -1523,12 +1521,17 @@ a:hover{
     padding-bottom: 1.65rem;
   }
   .posts-list__item-date{
-    display: table-cell;
     text-transform: uppercase;
     min-width: 13em;
     margin-right: 2em;
     font-size: 0.7776rem;
   }
+  @media (min-width: 50.01em) {
+    .posts-list__item-date{
+      display: table-cell;
+    }
+  }
+
   .posts-list__item-excerpt{
     display: table-cell;
   }
@@ -1554,6 +1557,13 @@ a:hover{
   position: relative;
   z-index: 2;
   border-radius: 20rem;
-  border: .1rem solid rgb(55, 129, 140);
   box-shadow: 0 0 0 .1rem rgb(232, 97, 0);
+}
+
+blockquote{
+  display: block;
+  padding: 1rem;
+  font-size: 1.1232rem;
+  border-left: 5px solid rgb(232, 97, 0);
+  background-color: #F5F5F5;
 }
