@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Macxim/macxim.github.io.svg?branch=master)](https://travis-ci.org/Macxim/macxim.github.io)
 [![Dependency Status](https://gemnasium.com/Macxim/macxim.github.io.svg)](https://gemnasium.com/Macxim/macxim.github.io)
 
 # Introduction
