@@ -1,13 +1,15 @@
 /*
- * CSS Recipes w00t!
+ * CSS Recipes FTW!
  * https://github.com/cssrecipes
  *
  * Reset
  * Defaults
- * Utils
+ * Vertical Rhythm
  * Grid
+ * Utils
  *
  */
+
 @import "normalize.css/normalize.css";
 @import "cssrecipes-reset/index.css";
 @import "cssrecipes-defaults/index.css";
@@ -19,18 +21,23 @@
 @import "cssrecipes-utils/lib/all.css"; /* Mobile-first */
 @import "cssrecipes-utils/lib/min.css"; /* Mobile-first */
 
-/**
-* Fonts
-*/
 @import "typo.css";
+@import "highlight.css";
+
 
 /**
-* customise recipes
+* Customise recipes
 */
 .r-Grid {
   width: auto;
   margin: 0 auto;
   padding: 0 1rem;
+}
+@media (--r-minS) {
+  .r-Grid {
+    width: 25rem;
+    padding: 0;
+  }
 }
 @media (--r-minM) {
   .r-Grid {
@@ -44,9 +51,25 @@
   }
 }
 
+/**
+* Custom properties
+*/
+
 :root {
   --primary-Color:             #E86100;
   --secondary-Color:           #2c3e50;
+  --r-fontSizeRatio:           1.10;
+}
+
+a,
+a:visited {
+  position: relative;
+  color: var(--primary-Color);
+  text-decoration: underline;
+  transition: all .2s ease-in-out;
+}
+a:hover{
+  color: var(--secondary-Color);
 }
 
 .limited-visibility{
@@ -59,6 +82,10 @@
   clip: rect(0,0,0,0);
   border: 0;
 }
+
+/**
+* Header
+*/
 
 .site-header{
   padding: 1rem;
@@ -77,21 +104,23 @@
   background-image: linear-gradient(to bottom, color(#FFF a(0.6)) 10%, color(#FFF a(1)) 100%);
 }
 
-a,
-a:visited {
+.about-me-avatar{
+  display: block;
+  margin: 0rem auto 3rem;
   position: relative;
-  color: color(var(--primary-Color));
-  text-decoration: underline;
-  transition: all .2s ease-in-out;
-}
-a:hover{
-  color: color(var(--secondary-Color));
+  z-index: 2;
+  border-radius: 20rem;
+  box-shadow: 0 0 0 .1rem var(--primary-Color);
 }
 
 .site-logo{
   display: inline-block;
   border: 0;
 }
+
+/**
+* Languages
+*/
 
 .site-lang{
   display: table-cell;
@@ -132,6 +161,11 @@ a:hover{
     border-bottom: 3px solid;
   }
 
+
+/**
+* Navigation
+*/
+
 .site-nav{
   display: table-cell;
   padding: 0;
@@ -158,23 +192,32 @@ a:hover{
     border-width: 3px;
   }
 
-.jumbotron{
+/**
+* Jumbotron
+*/
 
+.jumbotron__title{
+  position: relative;
+  padding: 0 1rem;
+  margin-top: -4rem;
+  text-shadow: 0px .05rem .1rem rgba(0, 0, 0, .65);
+  text-align: center;
+  z-index: 2;
 }
+@media (--r-minM) {
   .jumbotron__title{
-    position: relative;
-    padding: 0 1rem;
-    margin-top: -4rem;
-    font-size: calc(var(--r-h1-fontSize) * 1.5);
-    line-height: calc(var(--r-h1-lineHeight) * 1.5);
-    text-shadow: 0px .05rem .1rem rgba(0, 0, 0, .65);
-    text-align: center;
-    z-index: 2;
+    font-size: calc(var(--r-h1-fontSize) * 1.25);
+    line-height: calc(var(--r-h1-lineHeight) * 1.25);
   }
-  .jumbotron__title.limited-visibility{
-    margin-top: 2rem;
-  }
+}
 
+.jumbotron__title.limited-visibility{
+  margin-top: 2rem;
+}
+
+/**
+* Photo credit
+*/
 
 .page__photo-credit{
   position: fixed;
@@ -199,6 +242,9 @@ a:hover{
   opacity: 1;
 }
 
+/**
+* Posts
+*/
 
 .post-date{
   text-align: center;
@@ -243,21 +289,4 @@ a:hover{
 
 .article{
   margin-bottom: 2rem;
-}
-
-.about-me-avatar{
-  display: block;
-  margin: 0rem auto 3rem;
-  position: relative;
-  z-index: 2;
-  border-radius: 20rem;
-  box-shadow: 0 0 0 .1rem color(var(--primary-Color));
-}
-
-blockquote{
-  display: block;
-  padding: 1rem;
-  font-size: calc(var(--r-h2-fontSize) * 0.65);
-  border-left: 5px solid color(var(--primary-Color));
-  background-color: #F5F5F5;
 }
