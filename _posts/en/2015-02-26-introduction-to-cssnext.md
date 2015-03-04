@@ -22,7 +22,9 @@ You should take a look at the [feature list](https://github.com/cssnext/cssnext/
 
 ### What about my current CSS preprocessor?
 
-Forget about the dangers of mixins, @extend and infinite nesting; mostly caused by overzealous use and/or misuse of such tools, but still. You don't really need this.
+Forget about the dangers of mixins, @extend and infinite nesting; mostly caused by overzealous use and/or misuse of such tools, but still.
+
+Guess what, you don't really need this.
 
 You should give **cssnext** a shot and go back to Vanilla CSS. And with a nice and clean touch of BEM syntax, you will feel alive again.
 

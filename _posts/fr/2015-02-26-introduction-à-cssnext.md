@@ -12,23 +12,25 @@ D'après le [site officiel](https://cssnext.github.io/):
 
 Depuis CSS3, vous avez savez sans doute que CSS est divisé en plusieurs documents indépendants appelés "modules". Ces modules peuvent avoir différents niveaux de stabilité et différents [statuts](http://www.w3.org/Style/CSS/current-work#legend)*[en]*. La mise en œuvre de ces modules par les navigateurs peut prendre un certain temps et encore plus pour que le W3C les approuve comme [Recommandation](http://www.w3.org/2005/10/Process-20051014/tr#RecsW3C)*[en]*.
 
-With **cssnext**, you can use the syntax of [CSS Module Level 4](http://www.xanthir.com/b4Ko0) such as _custom properties_ or _custom media queries_. **cssnext** will transform this new strange syntax into something that the browser can actually understand.
+Avec **cssnext**, vous pouvez utiliser la syntaxe des [CSS Module Level 4](http://www.xanthir.com/b4Ko0) tels que les _propriétés personnalisées (custom properties)_ ou les _media queries personnalisées_. **cssnext** va transformer cette nouvelle et étrange syntaxe en quelque chose que le navigateur peut comprendre.
 
-In short, it makes you **taste the future**.
+En clair, il vous donne un **avant-goût du futur**.
 
-I don't know about you but speaking as someone who loves to experiment with cutting-edge technologies, I think this is pretty cool!
+Je ne sais pas vous mais étant quelqu'un qui aime expérimenter avec les dernières technologies de pointe, je trouve ça pluôt cool !
 
-You should take a look at the [feature list](https://github.com/cssnext/cssnext/blob/master/README.md#features).
+Je vous conseille de jeter un oeil à la [liste des fonctionnalités](https://github.com/cssnext/cssnext/blob/master/README.md#features)*[en]*.
 
-### What about my current CSS preprocessor?
+### Quid de mon préprocesseur actuel ?
 
-Forget about the dangers of mixins, @extend and infinite nesting; mostly caused by overzealous use and/or misuse of such tools, but still. You don't really need this.
+Oubliez les dangers des mixins, @extend et autres nesting infinis ; certes causés par une (sur-|mauvaise) utilisation de ces outils mais quand même.
 
-You should give **cssnext** a shot and go back to Vanilla CSS. And with a nice and clean touch of BEM syntax, you will feel alive again.
+Devinez quoi, vous n'en avez pas vraiment besoin.
 
-## Examples
+Essayez **cssnext** et retournez à ce bon vieux Vanilla CSS. Et avec un zeste de méthodologie BEM, vous vous sentirez revivre.
 
-Let's take a look at the features that **cssnext** offers at the moment.
+## Exemples
+
+Voyons voir quelles sont les fonctionnalités offertes par **cssnext** pour le moment.
 
 First of all, be sure to check the [playground on the official website](https://cssnext.github.io/cssnext-playground/).
 
