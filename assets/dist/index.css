@@ -457,6 +457,7 @@ th {
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
 }
+
 /* Remove excess padding and border in Firefox 4+ */
 .r-ResetButton::-moz-focus-inner {
   border: 0;
@@ -466,6 +467,7 @@ th {
   border: none;
   font-family: inherit;
 }
+
 .r-ResetInput::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -477,23 +479,8 @@ th {
   padding: 0;
 }
 /*
- * Using html & * inherit make it simpler default behavior on a standalone part
- */
-.r-Defaults {
-  /*
-   * box model like it should be
-   *
-   * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-   */
-  box-sizing: border-box;
-
-  /*
-   * tables borders like they should be
-   * applied to * to also works for display: table;
-   */
-  border-collapse: collapse;
-}
-/*
+ * Some defaults are based on inherit
+ *
  * Why inherit ?
  * If you have a component and his children not using border-box for example:
  *
@@ -505,34 +492,46 @@ th {
  *
  * http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
-.r-Defaults *,
-.r-Defaults *:before,
-.r-Defaults *:after {
-  box-sizing: inherit;
-}
-.r-Defaults * { border-collapse: inherit; }
 /*
  * Repeating the background mostly makes sense in the <body>. Otherwise, people
  * usually want the image and preferably its center (not the top-right corner)
  */
-.r-Defaults *:not(body) {
+*:not(body) {
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
 /*
- * Makes the hidden attribute works even when an element is styled display: flex
- * http://lists.w3.org/Archives/Public/public-whatwg-archive/2014May/0001.html
+ * tables borders like they should be
+ * applied to * to also works for display: table;
  */
-.r-Defaults [hidden] { display: none !important; }
+html {border-collapse: collapse}
+* {border-collapse: inherit}
+/*
+ * box model like it should be
+ *
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+html {box-sizing: border-box}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 /*
  * kill document defaults margin & padding. We all do that all the times, right ?
  */
-.r-Defaults,
-.r-Defaults body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
+/*
+ * Makes the hidden attribute works even when an element is styled display: flex
+ * http://lists.w3.org/Archives/Public/public-whatwg-archive/2014May/0001.html
+ */
+[hidden] {display: none !important}
 
 /**
  * Vertical rhythm
@@ -564,7 +563,6 @@ th {
  */
 
 /* choose your ratio, then import this file */
-
 /*eg: @import "./cssrecipes-vertical-rhthym/lib/ratio/minor-third.css";*/
 
 :root {
@@ -577,10 +575,11 @@ th {
 }
 
 .r-VerticalRhythm {
+  font-size: 17px;
   font-size: 1.1rem;
+  line-height: 27px;
   line-height: 1.71875rem;
 }
-
 .r-VerticalRhythm h1,
 .r-VerticalRhythm .h1,
 .r-VerticalRhythm h2,
@@ -593,9 +592,9 @@ th {
 .r-VerticalRhythm .h5,
 .r-VerticalRhythm h6,
 .r-VerticalRhythm .h6 {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
 }
+
 
 /**
  * Heading 1
@@ -603,12 +602,15 @@ th {
  * <h1>Heading 1</h1>
  * <div class="h1">Heading 1</div>
  */
-
 .r-VerticalRhythm h1,
 .r-VerticalRhythm .h1 {
+  font-size: 36px;
   font-size: 2.28096rem;
+  line-height: 55px;
   line-height: 3.4375rem;
+  padding-top: 7px;
   padding-top: 0.44688rem;
+  margin-bottom: 20px;
   margin-bottom: 1.27187rem;
 }
 
@@ -618,12 +620,15 @@ th {
  * <h2>Heading 2</h2>
  * <div class="h2">Heading 2</div>
  */
-
 .r-VerticalRhythm h2,
 .r-VerticalRhythm .h2 {
+  font-size: 30px;
   font-size: 1.9008rem;
+  line-height: 27px;
   line-height: 1.71875rem;
+  padding-top: 7px;
   padding-top: 0.44688rem;
+  margin-bottom: 20px;
   margin-bottom: 1.27187rem;
 }
 
@@ -633,12 +638,15 @@ th {
  * <h3>Heading 3</h3>
  * <div class="h3">Heading 3</div>
  */
-
 .r-VerticalRhythm h3,
 .r-VerticalRhythm .h3 {
+  font-size: 25px;
   font-size: 1.584rem;
+  line-height: 27px;
   line-height: 1.71875rem;
+  padding-top: 7px;
   padding-top: 0.44688rem;
+  margin-bottom: 20px;
   margin-bottom: 1.27187rem;
 }
 
@@ -648,12 +656,15 @@ th {
  * <h4>Heading 4</h4>
  * <div class="h4">Heading 4</div>
  */
-
 .r-VerticalRhythm h4,
 .r-VerticalRhythm .h4 {
+  font-size: 21px;
   font-size: 1.32rem;
+  line-height: 27px;
   line-height: 1.71875rem;
+  padding-top: 7px;
   padding-top: 0.44688rem;
+  margin-bottom: 20px;
   margin-bottom: 1.27187rem;
 }
 
@@ -663,12 +674,15 @@ th {
  * <h5>Heading 5</h5>
  * <div class="h5">Heading 5</div>
  */
-
 .r-VerticalRhythm h5,
 .r-VerticalRhythm .h5 {
+  font-size: 17px;
   font-size: 1.1rem;
+  line-height: 27px;
   line-height: 1.71875rem;
+  padding-top: 7px;
   padding-top: 0.44688rem;
+  margin-bottom: 20px;
   margin-bottom: 1.27187rem;
 }
 
@@ -678,33 +692,32 @@ th {
  * <h6>Heading 6</h6>
  * <div class="h6">Heading 6</div>
  */
-
 .r-VerticalRhythm h6,
 .r-VerticalRhythm .h6 {
+  font-size: 14px;
   font-size: 0.91667rem;
+  line-height: 27px;
   line-height: 1.71875rem;
+  padding-top: 7px;
   padding-top: 0.44688rem;
+  margin-bottom: 20px;
   margin-bottom: 1.27187rem;
 }
 
 /* since h5 & h6 always small, it's interesting to have a difference with classic text */
-
 .r-VerticalRhythm h5,
 .r-VerticalRhythm .h5
 .r-VerticalRhythm h6,
 .r-VerticalRhythm .h6 { text-decoration: underline }
-
 /**
  * Small
  *
  * <small>small</small>
  * <small><small>smaller</small></small>
  */
-
 .r-VerticalRhythm small { font-size: 0.91667em}
 
 /* misc, really */
-
 .r-VerticalRhythm ul,
 .r-VerticalRhythm ol,
 .r-VerticalRhythm dl,
@@ -714,9 +727,10 @@ th {
 .r-VerticalRhythm table,
 .r-VerticalRhythm fieldset,
 .r-VerticalRhythm hr {
-  margin: 0 0 1.71875rem;
+  margin-top: 0;
+  margin-bottom: 27px;
+  margin-bottom: 1.71875rem;
 }
-
 /* vertical rhythm helper */
 
 .r-VerticalRhythm-helper {
@@ -733,6 +747,8 @@ th {
   bottom: 0;
   left: 0;
 
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .25) 1px, transparent 1px) 0 0 / 100% 1.71875rem, -webkit-linear-gradient(top, rgba(0, 0, 0, 0.16749999999999998), transparent 1px) 0 0.85938rem / 100% 1.71875rem, -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 0.42969rem / 100% 1.71875rem, -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 1.28906rem / 100% 1.71875rem;
+
   background: linear-gradient(to bottom, rgba(0, 0, 0, .25) 1px, transparent 1px) 0 0 / 100% 1.71875rem,
     linear-gradient(to bottom, rgba(0, 0, 0, 0.16749999999999998), transparent 1px) 0 0.85938rem / 100% 1.71875rem,
     linear-gradient(to bottom, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 0.42969rem / 100% 1.71875rem,
@@ -742,66 +758,83 @@ th {
 
   /* not rem so you can use .small in .small */
 }
+
 .r-Grid {
   display: block;
   font-size: 0; /* whitespace control */
   padding: 0;
   margin: 0;
 }
-/* Modifier --withGutter */
-.r-Grid--withGutter { margin: 0 -0.5rem }
-.r-Grid--withGutter > .r-Grid-cell { padding: 0 0.5rem }
-.r-Grid-cell {
+  /* Modifier --withGutter */
+  .r-Grid--withGutter { margin: 0 -8px; margin: 0 -0.5rem }
+
+    .r-Grid--withGutter > .r-Grid-cell { padding: 0 8px; padding: 0 0.5rem }
+    
+  .r-Grid-cell {
     display: inline-block;
     vertical-align: top;
+    font-size: 16px;
     font-size: 16px;
     font-size: 1rem;
     width: 100%;
     padding: 0;
   }
-.r-Grid-cell--alignTop {vertical-align: top }
-.r-Grid-cell--alignMiddle {vertical-align: middle }
-.r-Grid-cell--alignBottom {vertical-align: bottom }
+
+
+    .r-Grid-cell--alignTop {vertical-align: top }
+    .r-Grid-cell--alignMiddle {vertical-align: middle }
+    .r-Grid-cell--alignBottom {vertical-align: bottom }
 .r-all--1of12 {
   width: 8.33333%;
 }
+
 .r-all--1of10 {
   width: 10%;
 }
+
 .r-all--1of8 {
   width: 12.5%;
 }
+
 .r-all--1of6,
 .r-all--2of12 {
   width: 16.66667%;
 }
+
 .r-all--1of5,
 .r-all--2of10 {
   width: 20%;
 }
+
 .r-all--1of4,
 .r-all--2of8,
 .r-all--3of12 {
   width: 25%;
 }
+
 .r-all--3of10 {
   width: 30%;
 }
+
 .r-all--1of3,
 .r-all--2of6,
 .r-all--4of12 {
   width: 33.33333%;
 }
+
 .r-all--3of8 {
   width: 37.5%;
 }
+
 .r-all--2of5,
 .r-all--4of10 {
   width: 40%;
 }
+
 .r-all--5of12 {
   width: 41.66667%;
 }
+
 .r-all--1of2,
 .r-all--2of4,
 .r-all--3of6,
@@ -810,46 +843,58 @@ th {
 .r-all--6of12 {
   width: 50%;
 }
+
 .r-all--7of12 {
   width: 58.33333%;
 }
+
 .r-all--3of5,
 .r-all--6of10 {
   width: 60%;
 }
+
 .r-all--5of8 {
   width: 62.5%;
 }
+
 .r-all--2of3,
 .r-all--4of6,
 .r-all--8of12 {
   width: 66.66667%;
 }
+
 .r-all--7of10 {
   width: 70%;
 }
+
 .r-all--3of4,
 .r-all--6of8,
 .r-all--9of12 {
   width: 75%;
 }
+
 .r-all--4of5,
 .r-all--8of10 {
   width: 80%;
 }
+
 .r-all--5of6,
 .r-all--10of12 {
   width: 83.33333%;
 }
+
 .r-all--7of8 {
   width: 87.5%;
 }
+
 .r-all--9of10 {
   width: 90%;
 }
+
 .r-all--11of12 {
   width: 91.66667%;
 }
+
 .r-all--1of1,
 .r-all--2of2,
 .r-all--3of3,
@@ -860,6 +905,14 @@ th {
 .r-all--10of10,
 .r-all--12of12 {
   width: 100%;
+}
+
+.r-all--hidden {
+  display: none;
+}
+
+.r-all--visible {
+  display: inline-block;
 } /* Mobile-first */
 @media (min-width: 30.01em) {
 
@@ -986,6 +1039,13 @@ th {
     width: 100%;
   }
 
+  .r-minS--hidden {
+    display: none;
+  }
+
+  .r-minS--visible {
+    display: inline-block;
+  }
 }
 @media (min-width: 50.01em) {
 
@@ -1112,6 +1172,13 @@ th {
     width: 100%;
   }
 
+  .r-minM--hidden {
+    display: none;
+  }
+
+  .r-minM--visible {
+    display: inline-block;
+  }
 }
 @media (min-width: 65.01em) {
 
@@ -1238,6 +1305,13 @@ th {
     width: 100%;
   }
 
+  .r-minL--hidden {
+    display: none;
+  }
+
+  .r-minL--visible {
+    display: inline-block;
+  }
 }
 @media (min-width: 80.01em) {
 
@@ -1364,6 +1438,13 @@ th {
     width: 100%;
   }
 
+  .r-minXL--hidden {
+    display: none;
+  }
+
+  .r-minXL--visible {
+    display: inline-block;
+  }
 } /* Mobile-first */
 
 @font-face {
@@ -1425,27 +1506,35 @@ h1,h2,h3,h4,h5,h6{
 }
 blockquote{
   display: block;
+  padding: 16px;
   padding: 1rem;
+  font-size: 19px;
   font-size: 1.23552rem;
   border-left: 5px solid rgb(232, 97, 0);
   background-color: #F5F5F5;
 }
+
 pre{
+  padding: 8px 12px;
   padding: 0.5rem 0.75rem;
   font-family: monospace, monospace;
   font-size: 0.91667em;
-  margin: 0.5rem 1rem;
+  margin: 8px 0;
+  margin: 0.5rem 0;
   overflow-x: auto;
   counter-reset: line;
   border-left: 5px solid rgb(43, 136, 230);
 }
+
 p code{
+  padding: 3px 6px;
   padding: 0.2rem 0.4rem;
   margin: 0;
   font-size: 0.91667em;
   background-color: rgba(0, 0, 0, 0.12);
   border-radius: 3px;
 }
+
 /* Solarized Dark
 
 For use with Jekyll and Pygments
@@ -1463,143 +1552,76 @@ blue      #268bd2  reserved keywords
 cyan      #2aa198  strings, numbers
 green     #E2EAB0  operators, other keywords
 */
+
 .highlight {background-color: rgba(30, 30, 30, 0.85); color: #A7B7B7 }
-.highlight .c { color: #586e75 }
-/* Comment */
-.highlight .err { color: #A7B7B7 }
-/* Error */
-.highlight .g { color: #A7B7B7 }
-/* Generic */
-.highlight .k { color: #E2EAB0 }
-/* Keyword */
-.highlight .l { color: #A7B7B7 }
-/* Literal */
-.highlight .n { color: #A7B7B7 }
-/* Name */
-.highlight .o { color: #E2EAB0 }
-/* Operator */
-.highlight .x { color: #cb4b16 }
-/* Other */
-.highlight .p { color: #A7B7B7 }
-/* Punctuation */
-.highlight .cm { color: #586e75 }
-/* Comment.Multiline */
-.highlight .cp { color: #E2EAB0 }
-/* Comment.Preproc */
-.highlight .c1 { color: #586e75 }
-/* Comment.Single */
-.highlight .cs { color: #E2EAB0 }
-/* Comment.Special */
-.highlight .gd { color: #2aa198 }
-/* Generic.Deleted */
-.highlight .ge { color: #A7B7B7; font-style: italic }
-/* Generic.Emph */
-.highlight .gr { color: #dc322f }
-/* Generic.Error */
-.highlight .gh { color: #cb4b16 }
-/* Generic.Heading */
-.highlight .gi { color: #E2EAB0 }
-/* Generic.Inserted */
-.highlight .go { color: #A7B7B7 }
-/* Generic.Output */
-.highlight .gp { color: #A7B7B7 }
-/* Generic.Prompt */
-.highlight .gs { color: #A7B7B7; font-weight: bold }
-/* Generic.Strong */
-.highlight .gu { color: #cb4b16 }
-/* Generic.Subheading */
-.highlight .gt { color: #A7B7B7 }
-/* Generic.Traceback */
-.highlight .kc { color: #cb4b16 }
-/* Keyword.Constant */
-.highlight .kd { color: #268bd2 }
-/* Keyword.Declaration */
-.highlight .kn { color: #E2EAB0 }
-/* Keyword.Namespace */
-.highlight .kp { color: #E2EAB0 }
-/* Keyword.Pseudo */
-.highlight .kr { color: #268bd2 }
-/* Keyword.Reserved */
-.highlight .kt { color: #dc322f }
-/* Keyword.Type */
-.highlight .ld { color: #A7B7B7 }
-/* Literal.Date */
-.highlight .m { color: #2aa198 }
-/* Literal.Number */
-.highlight .s { color: #2aa198 }
-/* Literal.String */
-.highlight .na { color: #A7B7B7 }
-/* Name.Attribute */
-.highlight .nb { color: #B58900 }
-/* Name.Builtin */
-.highlight .nc { color: #268bd2 }
-/* Name.Class */
-.highlight .no { color: #cb4b16 }
-/* Name.Constant */
-.highlight .nd { color: #268bd2 }
-/* Name.Decorator */
-.highlight .ni { color: #cb4b16 }
-/* Name.Entity */
-.highlight .ne { color: #cb4b16 }
-/* Name.Exception */
-.highlight .nf { color: #268bd2 }
-/* Name.Function */
-.highlight .nl { color: #A7B7B7 }
-/* Name.Label */
-.highlight .nn { color: #A7B7B7 }
-/* Name.Namespace */
-.highlight .nx { color: #A7B7B7 }
-/* Name.Other */
-.highlight .py { color: #A7B7B7 }
-/* Name.Property */
-.highlight .nt { color: #268bd2 }
-/* Name.Tag */
-.highlight .nv { color: #268bd2 }
-/* Name.Variable */
-.highlight .ow { color: #E2EAB0 }
-/* Operator.Word */
-.highlight .w { color: #A7B7B7 }
-/* Text.Whitespace */
-.highlight .mf { color: #2aa198 }
-/* Literal.Number.Float */
-.highlight .mh { color: #2aa198 }
-/* Literal.Number.Hex */
-.highlight .mi { color: #2aa198 }
-/* Literal.Number.Integer */
-.highlight .mo { color: #2aa198 }
-/* Literal.Number.Oct */
-.highlight .sb { color: #586e75 }
-/* Literal.String.Backtick */
-.highlight .sc { color: #2aa198 }
-/* Literal.String.Char */
-.highlight .sd { color: #A7B7B7 }
-/* Literal.String.Doc */
-.highlight .s2 { color: #2aa198 }
-/* Literal.String.Double */
-.highlight .se { color: #cb4b16 }
-/* Literal.String.Escape */
-.highlight .sh { color: #A7B7B7 }
-/* Literal.String.Heredoc */
-.highlight .si { color: #2aa198 }
-/* Literal.String.Interpol */
-.highlight .sx { color: #2aa198 }
-/* Literal.String.Other */
-.highlight .sr { color: #dc322f }
-/* Literal.String.Regex */
-.highlight .s1 { color: #2aa198 }
-/* Literal.String.Single */
-.highlight .ss { color: #2aa198 }
-/* Literal.String.Symbol */
-.highlight .bp { color: #268bd2 }
-/* Name.Builtin.Pseudo */
-.highlight .vc { color: #268bd2 }
-/* Name.Variable.Class */
-.highlight .vg { color: #268bd2 }
-/* Name.Variable.Global */
-.highlight .vi { color: #268bd2 }
-/* Name.Variable.Instance */
-.highlight .il { color: #2aa198 }
-/* Literal.Number.Integer.Long */
+.highlight .c { color: #586e75 } /* Comment */
+.highlight .err { color: #A7B7B7 } /* Error */
+.highlight .g { color: #A7B7B7 } /* Generic */
+.highlight .k { color: #E2EAB0 } /* Keyword */
+.highlight .l { color: #A7B7B7 } /* Literal */
+.highlight .n { color: #A7B7B7 } /* Name */
+.highlight .o { color: #E2EAB0 } /* Operator */
+.highlight .x { color: #cb4b16 } /* Other */
+.highlight .p { color: #A7B7B7 } /* Punctuation */
+.highlight .cm { color: #586e75 } /* Comment.Multiline */
+.highlight .cp { color: #E2EAB0 } /* Comment.Preproc */
+.highlight .c1 { color: #586e75 } /* Comment.Single */
+.highlight .cs { color: #E2EAB0 } /* Comment.Special */
+.highlight .gd { color: #2aa198 } /* Generic.Deleted */
+.highlight .ge { color: #A7B7B7; font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #dc322f } /* Generic.Error */
+.highlight .gh { color: #cb4b16 } /* Generic.Heading */
+.highlight .gi { color: #E2EAB0 } /* Generic.Inserted */
+.highlight .go { color: #A7B7B7 } /* Generic.Output */
+.highlight .gp { color: #A7B7B7 } /* Generic.Prompt */
+.highlight .gs { color: #A7B7B7; font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #cb4b16 } /* Generic.Subheading */
+.highlight .gt { color: #A7B7B7 } /* Generic.Traceback */
+.highlight .kc { color: #cb4b16 } /* Keyword.Constant */
+.highlight .kd { color: #268bd2 } /* Keyword.Declaration */
+.highlight .kn { color: #E2EAB0 } /* Keyword.Namespace */
+.highlight .kp { color: #E2EAB0 } /* Keyword.Pseudo */
+.highlight .kr { color: #268bd2 } /* Keyword.Reserved */
+.highlight .kt { color: #dc322f } /* Keyword.Type */
+.highlight .ld { color: #A7B7B7 } /* Literal.Date */
+.highlight .m { color: #2aa198 } /* Literal.Number */
+.highlight .s { color: #2aa198 } /* Literal.String */
+.highlight .na { color: #A7B7B7 } /* Name.Attribute */
+.highlight .nb { color: #B58900 } /* Name.Builtin */
+.highlight .nc { color: #268bd2 } /* Name.Class */
+.highlight .no { color: #cb4b16 } /* Name.Constant */
+.highlight .nd { color: #268bd2 } /* Name.Decorator */
+.highlight .ni { color: #cb4b16 } /* Name.Entity */
+.highlight .ne { color: #cb4b16 } /* Name.Exception */
+.highlight .nf { color: #268bd2 } /* Name.Function */
+.highlight .nl { color: #A7B7B7 } /* Name.Label */
+.highlight .nn { color: #A7B7B7 } /* Name.Namespace */
+.highlight .nx { color: #A7B7B7 } /* Name.Other */
+.highlight .py { color: #A7B7B7 } /* Name.Property */
+.highlight .nt { color: #268bd2 } /* Name.Tag */
+.highlight .nv { color: #268bd2 } /* Name.Variable */
+.highlight .ow { color: #E2EAB0 } /* Operator.Word */
+.highlight .w { color: #A7B7B7 } /* Text.Whitespace */
+.highlight .mf { color: #2aa198 } /* Literal.Number.Float */
+.highlight .mh { color: #2aa198 } /* Literal.Number.Hex */
+.highlight .mi { color: #2aa198 } /* Literal.Number.Integer */
+.highlight .mo { color: #2aa198 } /* Literal.Number.Oct */
+.highlight .sb { color: #586e75 } /* Literal.String.Backtick */
+.highlight .sc { color: #2aa198 } /* Literal.String.Char */
+.highlight .sd { color: #A7B7B7 } /* Literal.String.Doc */
+.highlight .s2 { color: #2aa198 } /* Literal.String.Double */
+.highlight .se { color: #cb4b16 } /* Literal.String.Escape */
+.highlight .sh { color: #A7B7B7 } /* Literal.String.Heredoc */
+.highlight .si { color: #2aa198 } /* Literal.String.Interpol */
+.highlight .sx { color: #2aa198 } /* Literal.String.Other */
+.highlight .sr { color: #dc322f } /* Literal.String.Regex */
+.highlight .s1 { color: #2aa198 } /* Literal.String.Single */
+.highlight .ss { color: #2aa198 } /* Literal.String.Symbol */
+.highlight .bp { color: #268bd2 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #268bd2 } /* Name.Variable.Class */
+.highlight .vg { color: #268bd2 } /* Name.Variable.Global */
+.highlight .vi { color: #268bd2 } /* Name.Variable.Instance */
+.highlight .il { color: #2aa198 } /* Literal.Number.Integer.Long */
 
 
 /**
@@ -1608,6 +1630,7 @@ green     #E2EAB0  operators, other keywords
 .r-Grid {
   width: auto;
   margin: 0 auto;
+  padding: 0 16px;
   padding: 0 1rem;
 }
 @media (min-width: 30.01em) {
@@ -1637,7 +1660,8 @@ a:visited {
   position: relative;
   color: #E86100;
   text-decoration: underline;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
 }
 a:hover{
   color: #2c3e50;
@@ -1659,7 +1683,9 @@ a:hover{
 */
 
 .site-header{
+  padding: 16px;
   padding: 1rem;
+  height: 208px;
   height: 13rem;
   position: relative;
   background-repeat: no-repeat;
@@ -1671,12 +1697,15 @@ a:hover{
   position: absolute;
   width: 100%;
   height: 100%;
+  margin: -16px;
   margin: -1rem;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.6) 10%, rgb(255, 255, 255) 100%);
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 10%, rgb(255, 255, 255) 100%);
 }
 
 .about-me-avatar{
   display: block;
+  margin: 0px auto 48px;
   margin: 0rem auto 3rem;
   position: relative;
   z-index: 2;
@@ -1696,6 +1725,7 @@ a:hover{
 .site-lang{
   display: table-cell;
   padding: 0;
+  padding-left: 24px;
   padding-left: 1.5rem;
   position: relative;
 }
@@ -1704,9 +1734,11 @@ a:hover{
   display: block;
   content: "";
   width: 1px;
+  height: 24px;
   height: 1.5rem;
   border-left: 1px solid rgba(90, 90, 90, 0.5);
   position: absolute;
+  left: 11px;
   left: 0.7rem;
 }
 
@@ -1714,6 +1746,7 @@ a:hover{
     list-style-type: none;
     text-align: center;
     display: inline-block;
+    margin-left: 4px;
     margin-left: .3rem;;
   }
 
@@ -1740,11 +1773,13 @@ a:hover{
 .site-nav{
   display: table-cell;
   padding: 0;
+  padding-top: 20px;
   padding-top: 1.25rem;
 }
 
   .site-nav__item{
     display: inline;
+    margin: 0 4px;
     margin: 0 .3rem;
     list-style-type: none;
     text-transform: lowercase;
@@ -1769,8 +1804,11 @@ a:hover{
 
 .jumbotron__title{
   position: relative;
+  padding: 0 16px;
   padding: 0 1rem;
+  margin-top: -64px;
   margin-top: -4rem;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, .65);
   text-shadow: 0px .05rem .1rem rgba(0, 0, 0, .65);
   text-align: center;
   z-index: 2;
@@ -1783,6 +1821,7 @@ a:hover{
 }
 
 .jumbotron__title.limited-visibility{
+  margin-top: 32px;
   margin-top: 2rem;
 }
 
@@ -1801,7 +1840,9 @@ a:hover{
   border: 0;
   background-color: #0C070E;
   color: rgba(241, 242, 243, 0.3);
+  padding: 2px 9px;
   padding: .15rem .6rem;
+  font-size: 12px;
   font-size: 0.77917rem;
   text-decoration: none;
   opacity: .7;
@@ -1820,6 +1861,7 @@ a:hover{
 .post-date{
   text-align: center;
   color: #2c3e50;
+  font-size: 15px;
   font-size: 0.9504rem;
 }
 
@@ -1829,12 +1871,14 @@ a:hover{
 
   .posts-list__item{
     list-style-type: none;
+    padding-bottom: 26px;
     padding-bottom: 1.65rem;
   }
   .posts-list__item-date{
     text-transform: uppercase;
     min-width: 13em;
     margin-right: 2em;
+    font-size: 13px;
     font-size: 0.85536rem;
   }
   @media (min-width: 50.01em) {
@@ -1850,14 +1894,17 @@ a:hover{
     display: block;
     content: "";
     width: 100%;
+    height: 28px;
     height: 1.75rem;
     border-bottom: 1px solid rgba(90, 90, 90, 0.15);
   }
   .posts-list__item-title{
     display: block;
+    font-size: 19px;
     font-size: 1.23552rem;
   }
 
 .article{
+  margin-bottom: 32px;
   margin-bottom: 2rem;
 }
