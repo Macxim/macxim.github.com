@@ -32,7 +32,7 @@ You should give **cssnext** a shot and go back to Vanilla CSS. And with a nice a
 
 Let's take a look at the features that **cssnext** offers at the moment.
 
-First of all, be sure to check the [playground on the official website](https://cssnext.github.io/cssnext-playground/).
+First of all, be sure to check out the [playground on the official website](https://cssnext.github.io/cssnext-playground/).
 
 ### Automatic vendor prefixes
 
@@ -123,3 +123,34 @@ h4,
 h5,
 h6{ margin-top; 0; }
 ```
+
+### color()
+
+A simple [color function](http://dev.w3.org/csswg/css-color/#modifying-colors) to apply _color adjusters_ (hue, lightness, tint, and so on) to a base color.
+
+Examples:
+
+```css
+.class{
+  background-color: color(#2B88E6);
+  color: color(#2B88E6 red(+30) green(-50) blue(6%) alpha(.65));
+  border-top-color: color(#2B88E6 saturation(-8%) whiteness(+50%));
+  border-right-color: color(#2B88E6 lightness(5%) blackness(-25%));
+  border-bottom-color: color(#2B88E6 tint(80%));
+  border-left-color: color(#2B88E6 shade(75%));
+}
+```
+The code above will be transformed into...
+
+```css
+.class{
+  background-color: rgb(43, 136, 230);
+  color: rgba(73, 86, 15, 0.65);
+  border-top-color: rgb(181, 201, 222);
+  border-right-color: rgb(3, 45, 87);
+  border-bottom-color: rgb(213, 231, 250);
+  border-left-color: rgb(11, 34, 58);
+}
+```
+
+## Limitations

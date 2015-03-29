@@ -32,9 +32,9 @@ Essayez **cssnext** et retournez à ce bon vieux Vanilla CSS. Et avec un zeste d
 
 Voyons voir quelles sont les fonctionnalités offertes par **cssnext** pour le moment.
 
-First of all, be sure to check the [playground on the official website](https://cssnext.github.io/cssnext-playground/).
+Avant toute chose, vous devriez aller faire un tour sur le [playground du site officiel](https://cssnext.github.io/cssnext-playground/).
 
-### Automatic vendor prefixes
+### Préfixes propriétaires automatiques
 
 ```css
 
@@ -44,7 +44,7 @@ First of all, be sure to check the [playground on the official website](https://
 }
 ```
 
-This will be transformed by **cssnext** via Autoprefixer in:
+Cela va être transformé par **cssnext** via Autoprefixer en :
 
 ```css
 .h1{
@@ -55,9 +55,9 @@ This will be transformed by **cssnext** via Autoprefixer in:
           transition: transform 1s;
 }
 ```
-### Custom properties & var() limited to `:root`
+### Propriétés personnalisées et var() limité à `:root`
 
-Also known as the much awaited [CSS variables](http://www.w3.org/TR/css-variables/).
+Aussi connues sous le nom des très attendues [variables CSS](http://www.w3.org/TR/css-variables/)*[en]*.
 
 ```css
 :root {
@@ -67,7 +67,7 @@ Also known as the much awaited [CSS variables](http://www.w3.org/TR/css-variable
   --r-Grid-baseFontSizeFallback:   16px;
 }
 ```
-You can use them this way:
+À utiliser de cette façon :
 
 ```css
 .h1 {
@@ -81,9 +81,9 @@ body {
 }
 ```
 
-### Custom Media Queries
+### Media Queries personnalisées
 
-Simply-named and semantic aliases ([check the specs](http://dev.w3.org/csswg/mediaqueries/#custom-mq)).
+Pour créer des alias sémantiques, clairs et simples ([lisez la doc'](http://dev.w3.org/csswg/mediaqueries/#custom-mq))*[en]*).
 
 ```css
 @custom-media --viewport-medium (width <= 40rem);
@@ -101,9 +101,9 @@ Usage:
 }
 ```
 
-### Custom selectors
+### Sélecteurs personnalisés
 
-Take a look at the [specs](http://dev.w3.org/csswg/css-extensions/#custom-selectors) first .
+Encore une fois, un petit tour sur les [specs](http://dev.w3.org/csswg/css-extensions/#custom-selectors))*[en]* pour commencer.
 Let's say we want to apply some styles to all headings.
 
 ```css
@@ -113,7 +113,7 @@ Let's say we want to apply some styles to all headings.
   margin-top: 0;
 }
 ```
-This will output the following:
+Ce qui va générer la chose suivante :
 
 ```css
 h1,
