@@ -26,7 +26,7 @@ Forget about the dangers of mixins, @extend and infinite nesting; mostly caused 
 
 Guess what, you don't really need this.
 
-You should give **cssnext** a shot and go back to Vanilla CSS. And with a nice and clean touch of BEM syntax, you will feel alive again.
+You should give **cssnext** a shot and go back to Vanilla CSS. And with a nice and clean touch of BEM syntax, you will [feel alive again](http://philipwalton.com/articles/side-effects-in-css/).
 
 ## Examples
 
