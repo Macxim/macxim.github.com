@@ -6,12 +6,10 @@ gulp.task('styles', function() {
   gulp.src("css/index.css")
   .pipe(cssnext({
     compress: false,
-    features: {
-      import: {
-        path: [
-          "node_modules"
-        ]
-      }
+    import: {
+      path: [
+        "node_modules"
+      ]
     }
   }))
   .pipe(gulp.dest("./dist/"))
