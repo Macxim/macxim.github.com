@@ -153,4 +153,81 @@ The code above will be transformed into...
 }
 ```
 
-## Limitations
+**cssnext** also offers the following color-related features.
+
+#### hwb()
+
+From the [specifications](http://dev.w3.org/csswg/css-color/#the-hwb-notation), HWB (Hue-Whiteness-Blackness) is similar to HSL but easier for humans to work with.
+
+```css
+.title{
+  color: hwb(125, 32%, 47%);  /* output: rgb(33, 135, 42); */
+}
+```
+
+Output:
+
+```css
+.title{
+  color: rgb(33, 135, 42);
+}
+```
+
+#### gray()
+
+Grays are a [so cool](http://dev.w3.org/csswg/css-color/#grays) they have a function of their own.
+
+```css
+.section{
+  background-color: gray(120, 50%);
+  border-color: gray(17%, 25%);
+}
+```
+
+This will output:
+
+```css
+.section{
+  background-color: rgba(120, 120, 120, 0.5);
+  border-color: rgba(43, 43, 43, 0.25);
+}
+```
+
+
+#### #rrggbbaa
+
+**cssnext** transforms the [hexadecimal notations](http://dev.w3.org/csswg/css-color/#hex-notation) #RRGGBBAA and #RGBA into rgba().
+
+```css
+body{
+  color: #5c69;
+  background-color: #C73D5C59;
+}
+```
+
+Output
+
+```css
+body{
+  color: rgba(85, 204, 102, 0.6);
+  background-color: rgba(199, 61, 92, 0.34902);
+}
+```
+
+#### rebeccapurple
+
+Simply transforms `rebeccapurple` into `rgb(102, 51, 153)`.
+
+
+------
+
+### font-variant properties
+
+### filter properties
+
+### rem units
+
+## Bonus features
+
+### import
+### Minification
