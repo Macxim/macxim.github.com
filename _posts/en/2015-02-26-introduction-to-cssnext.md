@@ -161,7 +161,7 @@ From the [specifications](http://dev.w3.org/csswg/css-color/#the-hwb-notation), 
 
 ```css
 .title{
-  color: hwb(125, 32%, 47%);  /* output: rgb(33, 135, 42); */
+  color: hwb(125, 32%, 47%);
 }
 ```
 
@@ -223,7 +223,39 @@ Simply transforms `rebeccapurple` into `rgb(102, 51, 153)`.
 
 ### font-variant properties
 
+For those like me who didn't even know about this, here is [the link](http://dev.w3.org/csswg/css-fonts/#propdef-font-variant) to the definiton and some more explanations.
+
+```css
+h2 {
+  font-variant-caps: small-caps;
+}
+
+.fractional-Numbers{
+  font-variant-numeric: diagonal-fractions;
+}
+```
+
+Output
+
+```css
+h2 {
+  -webkit-font-feature-settings: "c2sc";
+     -moz-font-feature-settings: "c2sc";
+          font-feature-settings: "c2sc";
+  font-variant-caps: small-caps;
+}
+
+.fractional-Numbers{
+  -webkit-font-feature-settings: "frac";
+    -moz-font-feature-settings: "frac";
+         font-feature-settings: "frac";
+  font-variant-numeric: diagonal-fractions;
+}
+```
+
 ### filter properties
+
+
 
 ### rem units
 
