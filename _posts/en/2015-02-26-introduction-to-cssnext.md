@@ -64,7 +64,6 @@ Also known as the much awaited [CSS variables](http://www.w3.org/TR/css-variable
   --primary-Color:                 #E86100;
   --secondary-Color:               #2c3e50;
   --r-Grid-baseFontSize:           1rem;
-  --r-Grid-baseFontSizeFallback:   16px;
 }
 ```
 You can use them this way:
@@ -131,7 +130,7 @@ A simple [color function](http://dev.w3.org/csswg/css-color/#modifying-colors) t
 Examples:
 
 ```css
-.class{
+.class {
   background-color: color(#2B88E6);
   color: color(#2B88E6 red(+30) green(-50) blue(6%) alpha(.65));
   border-top-color: color(#2B88E6 saturation(-8%) whiteness(+50%));
@@ -143,7 +142,7 @@ Examples:
 The code above will be transformed into...
 
 ```css
-.class{
+.class {
   background-color: rgb(43, 136, 230);
   color: rgba(73, 86, 15, 0.65);
   border-top-color: rgb(181, 201, 222);
@@ -160,7 +159,7 @@ The code above will be transformed into...
 From the [specifications](http://dev.w3.org/csswg/css-color/#the-hwb-notation), HWB (Hue-Whiteness-Blackness) is similar to HSL but easier for humans to work with.
 
 ```css
-.title{
+.title {
   color: hwb(125, 32%, 47%);
 }
 ```
@@ -168,17 +167,17 @@ From the [specifications](http://dev.w3.org/csswg/css-color/#the-hwb-notation), 
 Output:
 
 ```css
-.title{
+.title {
   color: rgb(33, 135, 42);
 }
 ```
 
 #### gray()
 
-Grays are a [so cool](http://dev.w3.org/csswg/css-color/#grays) they have a function of their own.
+Grays are [so cool](http://dev.w3.org/csswg/css-color/#grays) they have a function of their own.
 
 ```css
-.section{
+.section {
   background-color: gray(120, 50%);
   border-color: gray(17%, 25%);
 }
@@ -187,19 +186,18 @@ Grays are a [so cool](http://dev.w3.org/csswg/css-color/#grays) they have a func
 This will output:
 
 ```css
-.section{
+.section {
   background-color: rgba(120, 120, 120, 0.5);
   border-color: rgba(43, 43, 43, 0.25);
 }
 ```
-
 
 #### #rrggbbaa
 
 **cssnext** transforms the [hexadecimal notations](http://dev.w3.org/csswg/css-color/#hex-notation) #RRGGBBAA and #RGBA into rgba().
 
 ```css
-body{
+body {
   color: #5c69;
   background-color: #C73D5C59;
 }
@@ -208,7 +206,7 @@ body{
 Output
 
 ```css
-body{
+body {
   color: rgba(85, 204, 102, 0.6);
   background-color: rgba(199, 61, 92, 0.34902);
 }
@@ -219,8 +217,6 @@ body{
 Simply transforms `rebeccapurple` into `rgb(102, 51, 153)`.
 
 
-------
-
 ### font-variant properties
 
 For those like me who didn't even know about this, here is [the link](http://dev.w3.org/csswg/css-fonts/#propdef-font-variant) to the definiton and some more explanations.
@@ -230,7 +226,7 @@ h2 {
   font-variant-caps: small-caps;
 }
 
-.fractional-Numbers{
+.fractional-Numbers {
   font-variant-numeric: diagonal-fractions;
 }
 ```
@@ -245,7 +241,7 @@ h2 {
   font-variant-caps: small-caps;
 }
 
-.fractional-Numbers{
+.fractional-Numbers {
   -webkit-font-feature-settings: "frac";
     -moz-font-feature-settings: "frac";
          font-feature-settings: "frac";
@@ -255,11 +251,103 @@ h2 {
 
 ### filter properties
 
+A whole _new_ world of [image modifications](http://www.w3.org/TR/filter-effects/)!
 
+```css
+.awesome-Image {
+  filter: sepia(.7) hue-rotate(23deg);
+}
+
+.awesome-Picture {
+  filter: blur(8px);
+}
+```
+
+Will be transformed into:
+
+```css
+.awesome-Image {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.5751000000000001 0.5383 0.1323 0 0 0.24429999999999996 0.7802000000000001 0.11760000000000001 0 0 0.1904 0.3738 0.39170000000000005 0 0 0 0 0 1 0" /><feColorMatrix type="hueRotate" color-interpolation-filters="sRGB" values="23" /></filter></svg>#filter');
+  -webkit-filter: sepia(.7) hue-rotate(23deg);
+          filter: sepia(.7) hue-rotate(23deg);
+}
+
+.awesome-Picture {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="8" /></filter></svg>#filter');
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+```
 
 ### rem units
 
+Nothing extraordinary here, it generates pixel fallback for rem units.
+Oh, come on! Do we really need an example for this one?
+
 ## Bonus features
 
-### import
-### Minification
+The two following features are not really related to CSS specifications. However, they are definitely worth mentioning.
+
+### `import`
+
+What if you could import inline local files and modules (node_modules or web_modules) to output a bundled CSS file? Yes, [I'm looking at you Sass users](https://github.com/sass/sass/issues/193), ahem. Well, with **cssnext**, you can.
+To be able to do this, you need to set your packages' path correctly in your configuration file.
+
+### `compress`
+
+As you may have guessed, this is just an option to compress _or not_ your output file.
+
+### Usage
+
+Below is a basic example of these two features. I used [gulp-cssnext](https://github.com/cssnext/gulp-cssnext), one of the [many plugins](https://github.com/cssnext/cssnext#usage-with-other-tools) to help you start with **cssnext**.
+
+```js
+var gulp = require('gulp'),
+    cssnext = require("gulp-cssnext");
+
+gulp.task('styles', function() {
+  gulp.src("css/index.css")
+  .pipe(cssnext({
+    compress: true,  // default is false
+    import: {
+      path: [
+        "./node_modules"  // define path of your packages
+      ]
+    }
+  }))
+  .pipe(gulp.dest("./dist/"))
+});
+
+```
+
+Then, in my `index.css` file, I will have:
+
+```css
+
+@import "normalize.css"; /* == @import "./node_modules/normalize.css/index.css"; */
+@import "cssrecipes-defaults"; /* == @import "./node_modules/cssrecipes-defaults/index.css"; */
+@import "project-modules/partner"; /* relative to css/ */
+@import "typo"; /* same level as my main index.css located in css/ */
+@import "highlight" (min-width: 25em);
+
+```
+_**Note**: You may have noticed that you can omit the .css extension._
+
+And the final output will be:
+
+```css
+
+/* content of ./node_modules/normalize.css/index.css */
+/* content of ./node_modules/cssrecipes-defaults/index.css */
+/* content of project-modules/partner.css */
+/* content of typo.css */
+@media (min-width: 25em) {
+  /* content of highlight.css */
+}
+```
+
+I know the feeling. Now you're in love too. :)
+
+Well, just to wrap it up here, let's say that the main purpose of **cssnext** is to build things according to the W3C specifications keeping in mind that, theoretically, it can be removed later on (when not needed anymore).
+
+Now it's your time to play. Be sure to check the [GitHub repository](https://github.com/cssnext/cssnext), follow [@cssnext on Twitter](https://twitter.com/cssnext) to get the latest news & join [#cssnext on irc.freenode.net](http://webchat.freenode.net/?channels=cssnext) if you have any questions.

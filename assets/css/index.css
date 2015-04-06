@@ -1,28 +1,30 @@
 /*
- * CSS Recipes FTW!
- * https://github.com/cssrecipes
+ * cssnext + cssrecipes FTW!
+ * https://cssrecipes.github.io/
+ * https://cssnext.github.io/
  *
  * Reset
  * Defaults
  * Vertical Rhythm
+ * Custom Media Queries
  * Grid
  * Utils
  *
  */
 
 @import "normalize.css/normalize.css";
-@import "cssrecipes-reset/index.css";
-@import "cssrecipes-defaults/index.css";
+@import "cssrecipes-reset";
+@import "cssrecipes-defaults";
 
-@import "cssrecipes-vertical-rhythm/index.css";
+@import "cssrecipes-vertical-rhythm";
 @import "cssrecipes-vertical-rhythm/lib/ratio/minor-third.css";
-@import "cssrecipes-custom-media-queries/index.css";
-@import "cssrecipes-grid/index.css";
+@import "cssrecipes-custom-media-queries";
+@import "cssrecipes-grid";
 @import "cssrecipes-utils/lib/all.css"; /* Mobile-first */
 @import "cssrecipes-utils/lib/min.css"; /* Mobile-first */
 
-@import "typo.css";
-@import "highlight.css";
+@import "typo";
+@import "highlight";
 
 
 /**
@@ -111,6 +113,12 @@ a:hover{
   z-index: 2;
   border-radius: 20rem;
   box-shadow: 0 0 0 .1rem var(--primary-Color);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.about-me-avatar:hover{
+  filter: blur(5px);
 }
 
 .site-logo{

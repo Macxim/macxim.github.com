@@ -1,10 +1,12 @@
 /*
- * CSS Recipes FTW!
- * https://github.com/cssrecipes
+ * cssnext + cssrecipes FTW!
+ * https://cssrecipes.github.io/
+ * https://cssnext.github.io/
  *
  * Reset
  * Defaults
  * Vertical Rhythm
+ * Custom Media Queries
  * Grid
  * Utils
  *
@@ -1711,6 +1713,15 @@ a:hover{
   z-index: 2;
   border-radius: 20rem;
   box-shadow: 0 0 0 .1rem #E86100;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.about-me-avatar:hover{
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 .site-logo{
