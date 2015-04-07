@@ -243,8 +243,8 @@ h2 {
 
 .fractional-Numbers {
   -webkit-font-feature-settings: "frac";
-    -moz-font-feature-settings: "frac";
-         font-feature-settings: "frac";
+     -moz-font-feature-settings: "frac";
+          font-feature-settings: "frac";
   font-variant-numeric: diagonal-fractions;
 }
 ```
@@ -291,7 +291,6 @@ The two following features are not really related to CSS specifications. However
 ### `import`
 
 What if you could import inline local files and modules (node_modules or web_modules) to output a bundled CSS file? Yes, [I'm looking at you Sass users](https://github.com/sass/sass/issues/193), ahem. Well, with **cssnext**, you can.
-To be able to do this, you need to set your packages' path correctly in your configuration file.
 
 ### `compress`
 
@@ -309,11 +308,6 @@ gulp.task('styles', function() {
   gulp.src("css/index.css")
   .pipe(cssnext({
     compress: true,  // default is false
-    import: {
-      path: [
-        "./node_modules"  // define path of your packages
-      ]
-    }
   }))
   .pipe(gulp.dest("./dist/"))
 });
@@ -331,7 +325,7 @@ Then, in my `index.css` file, I will have:
 @import "highlight" (min-width: 25em);
 
 ```
-_**Note**: You may have noticed that you can omit the .css extension._
+_**Note**: CSS files located in `node_modules` are automatically found and imported. Also, you may have noticed that you can omit the .css extension._
 
 And the final output will be:
 
@@ -349,5 +343,6 @@ And the final output will be:
 I know the feeling. Now you're in love too. :)
 
 Well, just to wrap it up here, let's say that the main purpose of **cssnext** is to build things according to the W3C specifications keeping in mind that, theoretically, it can be removed later on (when not needed anymore).
+Meanwhile, there is still work to do: here you can find a [list of features that are waiting to be implemented](https://github.com/cssnext/cssnext/issues?q=is%3Aopen+is%3Aissue+label%3Afeature+label%3Aready).
 
-Now it's your time to play. Be sure to check the [GitHub repository](https://github.com/cssnext/cssnext), follow [@cssnext on Twitter](https://twitter.com/cssnext) to get the latest news & join [#cssnext on irc.freenode.net](http://webchat.freenode.net/?channels=cssnext) if you have any questions.
+Now it's your time to play. Be sure to check the [GitHub repository](https://github.com/cssnext/cssnext), follow [@cssnext](https://twitter.com/cssnext) on Twitter to get the latest news and join [#cssnext on irc.freenode.net](http://webchat.freenode.net/?channels=cssnext) if you have any questions.
