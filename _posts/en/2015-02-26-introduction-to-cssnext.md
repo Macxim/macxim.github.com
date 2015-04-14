@@ -10,7 +10,7 @@ From [the official website](https://cssnext.github.io/):
 
 ## What does it mean?
 
-Since CSS3, you may have heard that CSS is divided into several independent documents called "modules". Those modules can have different stability and [statuses](http://www.w3.org/Style/CSS/current-work#legend). It can take quite some time for the browsers to implement those modules and even more for the W3C to give them the ultimate status of [Recommandation](http://www.w3.org/2005/10/Process-20051014/tr#RecsW3C).
+Since CSS3, you may have heard that CSS is divided into several independent documents called "modules". Those modules can have different levels of stability and [statuses](http://www.w3.org/Style/CSS/current-work#legend). It can take quite some time for the browsers to implement those modules and even more for the W3C to give them the ultimate status of [Recommandation](http://www.w3.org/2005/10/Process-20051014/tr#RecsW3C).
 
 With **cssnext**, you can use the syntax of [CSS Module Level 4](http://www.xanthir.com/b4Ko0) such as _custom properties_ or _custom media queries_. **cssnext** will transform this new strange syntax into something that the browser can actually understand.
 
@@ -38,7 +38,7 @@ First of all, be sure to check out the [playground on the official website](http
 
 ```css
 
-.h1{
+.h1 {
   transform: skewX(25deg);
   transition: transform 1s;
 }
@@ -47,7 +47,7 @@ First of all, be sure to check out the [playground on the official website](http
 This will be transformed by **cssnext** via Autoprefixer in:
 
 ```css
-.h1{
+.h1 {
   -webkit-transform: skewX(25deg);
       -ms-transform: skewX(25deg);
           transform: skewX(25deg);
@@ -102,7 +102,7 @@ Usage:
 
 ### Custom selectors
 
-Take a look at the [specs](http://dev.w3.org/csswg/css-extensions/#custom-selectors) first .
+Take a look at the [specs](http://dev.w3.org/csswg/css-extensions/#custom-selectors) first.
 Let's say we want to apply some styles to all headings.
 
 ```css
@@ -123,7 +123,7 @@ h5,
 h6{ margin-top; 0; }
 ```
 
-### color()
+### `color()`
 
 A simple [color function](http://dev.w3.org/csswg/css-color/#modifying-colors) to apply _color adjusters_ (hue, lightness, tint, and so on) to a base color.
 
@@ -281,8 +281,22 @@ Will be transformed into:
 
 ### rem units
 
-Nothing extraordinary here, it generates pixel fallback for rem units.
-Oh, come on! Do we really need an example for this one?
+Nothing extraordinary here, it generates **pixel fallback for rem units**.
+Oh, come on! Do we really need an example for this one? Alright, here you go!
+
+```css
+.section-Highlight {
+  font-size: 2.5rem;
+}
+```
+Output:
+
+```css
+.section-Highlight {
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+```
 
 ## Bonus features
 
@@ -343,6 +357,7 @@ And the final output will be:
 I know the feeling. Now you're in love too. :)
 
 Well, just to wrap it up here, let's say that the main purpose of **cssnext** is to build things according to the W3C specifications keeping in mind that, theoretically, it can be removed later on (when not needed anymore).
+
 Meanwhile, there is still work to do: here you can find a [list of features that are waiting to be implemented](https://github.com/cssnext/cssnext/issues?q=is%3Aopen+is%3Aissue+label%3Afeature+label%3Aready).
 
 Now it's your time to play. Be sure to check the [GitHub repository](https://github.com/cssnext/cssnext), follow [@cssnext](https://twitter.com/cssnext) on Twitter to get the latest news and join [#cssnext on irc.freenode.net](http://webchat.freenode.net/?channels=cssnext) if you have any questions.
