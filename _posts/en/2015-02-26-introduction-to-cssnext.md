@@ -72,7 +72,7 @@ You can use them this way:
 .h1 {
   color: var(--primary-Color);
 }
-.h1:hover{
+.h1:hover {
   color: var(--secondary-Color);
 }
 body {
@@ -120,7 +120,7 @@ h2,
 h3,
 h4,
 h5,
-h6{ margin-top; 0; }
+h6 { margin-top; 0; }
 ```
 
 ### `color()`
