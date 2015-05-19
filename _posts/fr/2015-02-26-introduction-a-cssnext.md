@@ -16,7 +16,7 @@ Avec **cssnext**, vous pouvez utiliser la syntaxe des [CSS Module Level 4](http:
 
 En clair, il vous donne un **avant-goût du futur**.
 
-Je ne sais pas vous mais étant quelqu'un qui aime expérimenter avec les dernières technologies de pointe, je trouve ça pluôt cool !
+Je ne sais pas vous mais étant quelqu'un qui aime expérimenter avec les dernières technologies de pointe, je trouve ça plutôt cool !
 
 Je vous conseille de jeter un oeil à la [liste des fonctionnalités](https://github.com/cssnext/cssnext/blob/master/README.md#features)*[en]*.
 
@@ -219,7 +219,7 @@ Transforme simplement la couleur `rebeccapurple` en `rgb(102, 51, 153)`.
 
 ### Propriétés de variation de police (_font-variant_)
 
-Pour ceux qui comme moi ne savaient même pas ce que c'était, voici le [lien](http://dev.w3.org/csswg/css-fonts/#propdef-font-variant) vers la définition accompagné d'autres explications plus détaillées.
+Pour ceux qui comme moi ne savaient même pas ce que c'était, voici le [lien](http://dev.w3.org/csswg/css-fonts/#propdef-font-variant) vers la définition accompagnée d'autres explications plus détaillées.
 
 ```css
 h2 {
@@ -304,15 +304,15 @@ Les deux fonctionnalités qui vont suivre ne sont pas vraiment en rapport avec l
 
 ### `import`
 
-What if you could import inline local files and modules (node_modules or web_modules) to output a bundled CSS file? Yes, [I'm looking at you Sass users](https://github.com/sass/sass/issues/193), ahem. Well, with **cssnext**, you can.
+Et si vous pouviez importer des fichiers locaux et des modules (`node_modules` ou `web_modules`) pour produire un seul et même fichier CSS les contenant tous ? Oui, [c'est à vous que je m'adresse, les utilisateurs de Sass](https://github.com/sass/sass/issues/193), hum. Eh bien, avec **cssnext**, c'est possible.
 
 ### `compress`
 
-As you may have guessed, this is just an option to compress _or not_ your output file.
+Comme vous l'avez sûrement deviné, c'est juste une option pour compresser _ou pas_ votre fichier de sortie.
 
 ### Usage
 
-Below is a basic example of these two features. I used [gulp-cssnext](https://github.com/cssnext/gulp-cssnext), one of the [many plugins](https://github.com/cssnext/cssnext#usage-with-other-tools) to help you start with **cssnext**.
+Voici un exemple simple de ces deux fonctionnalités. J'ai ici utilisé [gulp-cssnext](https://github.com/cssnext/gulp-cssnext), un des [nombreux plugins](https://github.com/cssnext/cssnext#usage-with-other-tools) qui vous aident à démarrer avec **cssnext**.
 
 ```js
 var gulp = require('gulp'),
@@ -328,7 +328,7 @@ gulp.task('styles', function() {
 
 ```
 
-Then, in my `index.css` file, I will have:
+Ensuite, dans mon fichier `index.css`, j'ai ceci :
 
 ```css
 
@@ -339,9 +339,9 @@ Then, in my `index.css` file, I will have:
 @import "highlight" (min-width: 25em);
 
 ```
-_**Note**: CSS files located in `node_modules` are automatically found and imported. Also, you may have noticed that you can omit the .css extension._
+_**Note**: les fichiers CSS situés dans `node_modules` seront automatiquement localisés et importés. Vous aurez également remarqué que vous pouvez vous passer de l'extension .css._
 
-Et le rendu final sera :
+Et le rendu final sera :
 
 ```css
 
@@ -354,10 +354,10 @@ Et le rendu final sera :
 }
 ```
 
-I know the feeling. Now you're in love too. :)
+Je sais ce que vous ressentez. Maintenant, vous aussi vous en êtes tombés amoureux. :)
 
-Well, just to wrap it up here, let's say that the main purpose of **cssnext** is to build things according to the W3C specifications keeping in mind that, theoretically, it can be removed later on (when not needed anymore).
+Bref, pour résumer, disons simplement que le but principal de **cssnext** est de pouvoir développer selon les spécifications du W3C en gardant bien à l'esprit que, théoriquement, il sera possible de le supprimer plus tard (quand il ne sera plus utile).
 
-Meanwhile, there is still work to do: here you can find a [list of features that are waiting to be implemented](https://github.com/cssnext/cssnext/issues?q=is%3Aopen+is%3Aissue+label%3Afeature+label%3Aready).
+En attendant, il y a encore du boulot : voici une [liste des fonctionnalités à venir](https://github.com/cssnext/cssnext/issues?q=is%3Aopen+is%3Aissue+label%3Afeature+label%3Aready).
 
-Now it's your time to play. Be sure to check the [GitHub repository](https://github.com/cssnext/cssnext), follow [@cssnext](https://twitter.com/cssnext) on Twitter to get the latest news and join [#cssnext on irc.freenode.net](http://webchat.freenode.net/?channels=cssnext) if you have any questions.
+Maintenant, à vous de jouer. N'oubliez pas d'aller faire un tour sur le [repo GitHub](https://github.com/cssnext/cssnext), n'hésitez pas à suivre [@cssnext](https://twitter.com/cssnext) sur Twitter pour être au courant des dernières news et rejoignez la [room cssnext sur Gitter](https://gitter.im/cssnext/cssnext) si vous avez des questions.
