@@ -1,23 +1,14 @@
-/*
- * CSS Recipes w00t!
- * https://github.com/cssrecipes
- *
- * Reset
- * Defaults
- * Utils
- * Grid
- *
- */
 @import "normalize.css/normalize.css";
-@import "cssrecipes-reset/index.css";
 @import "cssrecipes-defaults/index.css";
 
 @import "cssrecipes-vertical-rhythm/index.css";
 @import "cssrecipes-vertical-rhythm/lib/ratio/minor-third.css";
+
 @import "cssrecipes-custom-media-queries/index.css";
 @import "cssrecipes-grid/index.css";
-@import "cssrecipes-utils/lib/all.css"; /* Mobile-first */
-@import "cssrecipes-utils/lib/min.css"; /* Mobile-first */
+
+@import "cssrecipes-utils/lib/all.css";
+@import "cssrecipes-utils/lib/min.css";
 
 /**
 * Fonts
