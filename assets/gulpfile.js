@@ -1,30 +1,103 @@
 var gulp = require('gulp'),
+    argv = require('yargs').argv,
+    gulpif = require('gulp-if'),
     watch = require('gulp-watch'),
-    cssnext = require("gulp-cssnext");
+    filter = require('gulp-filter'),
+    _      = require('lodash'),
+    plumber = require('gulp-plumber'),
+    postcss = require('gulp-postcss'),
+    rename = require('gulp-rename'),
+    svgmin = require('gulp-svgmin'),
+    notification = require('node-notifier');
+    gutil = require('gulp-util')
 
-gulp.task('styles', function() {
-  gulp.src("css/index.css")
-  .pipe(cssnext({
-    compress: false,
-    features: {
-      import: {
-        path: [
-          "node_modules"
-        ]
-      }
-    }
-  }))
-  .pipe(gulp.dest("./dist/"))
+
+function handleError(err){
+  // Notification
+  var notifier = notification
+  notifier.notify({ message: 'Error: ' + err.message });
+  // Log to console
+
+  gutil.log(gutil.colors.red('Error'), err.toString());
+  this.emit('end')
+}
+
+
+// CSS files compilation
+gulp.task('css', function () {
+
+  return gulp.src('css/index.css')
+    .pipe(postcss([
+      require("postcss-import")(),
+      require("postcss-url")(),
+      require("postcss-cssnext")(),
+      require("postcss-browser-reporter")(),
+      require("postcss-reporter")(),
+    ]))
+    .pipe(gulpif(argv.production, postcss([require("cssnano")()])))
+    .pipe(gulp.dest('dist/'))
 });
 
 
-// build
-gulp.task("dist", [
-  "styles",
-])
 
-gulp.task("watch", ["dist"], function() {
-  gulp.watch("css/**/*.css", ["styles"])
-})
+// SVG
+gulp.task('svgsymbol', function () {
 
-gulp.task("default", ["dist", "watch"])
+  var cssFilter = filter('**/*.css', { restore: true })
+  var svgFilter = filter('**/*.svg', { restore: true })
+
+  return gulp.src('img/icons/*.svg')
+    .pipe( plumber() )
+    .pipe( svgmin() )
+    .pipe( require('through2').obj(function( file, enc, cb ) { // clean the mess up
+      var fileString = file.contents.toString()
+
+      _.each([
+        /<title>.*<\/title>/gi,
+        /<desc>.*<\/desc>/gi,
+        /<!--.*-->/gi,
+        /<defs>.*<\/defs>/gi,
+        / +sketch:type=\"MSShapeGroup\"/gi,
+        / +sketch:type=\"MSPage\"/gi,
+        / +sketch:type=\"MSLayerGroup\"/gi,
+        / fill=\".*\"/gi,
+      ], function( regex ) {
+        fileString = fileString.replace(regex, '')
+      })
+
+      file.contents = new Buffer( fileString )
+      this.push( file )
+
+      cb()
+    }) )
+    .pipe(
+      require('gulp-svg-symbols')({
+        id: 'an-Svg--%f',
+        className: '.an-Svg--%f',
+        fontSize: 20
+      })
+    )
+    .pipe( cssFilter )
+    .pipe( rename('svg-symbols.css') )
+    .pipe( gulp.dest('css/src') ) // save css
+    .pipe( cssFilter.restore )
+    .pipe( svgFilter )
+    .pipe( require('gulp-rename')('svg-symbols.svg') )
+    .pipe( gulp.dest('img') ) // save template
+
+});
+
+// Watching assets
+gulp.task('watch', function() {
+  gulp.watch('css/src/**/*.css', ['css']);
+});
+
+
+
+// Main tasks
+//// `gulp` — For production just run `gulp --production`
+gulp.task('default', ['css', 'watch']);
+
+// Converts a bunch of SVG files to a single svg file containing each one as a symbol.
+// See https://github.com/Hiswe/gulp-svg-symbols/
+gulp.task('svg', ['svgsymbol']);
