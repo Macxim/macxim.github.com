@@ -12,7 +12,7 @@ layout: default
       <li class="posts-list__item">
         <span class="posts-list__item-date">{% include date.html date=post.date %}</span>
         <p class="posts-list__item-excerpt">
-          <a class="posts-list__item-title" href="{{ post.url }}">{{ post.title }}</a>
+          <a class="posts-list__item-title" href="{% if post.external %}{{ post.external.url }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
           {{ post.excerpt | markdownify | strip_html }}
         </p>
       </li>
