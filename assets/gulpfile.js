@@ -72,9 +72,9 @@ gulp.task('svgsymbol', function () {
     }) )
     .pipe(
       require('gulp-svg-symbols')({
-        id: 'an-Svg--%f',
-        className: '.an-Svg--%f',
-        fontSize: 20
+        id: 'macxim-Svg--%f',
+        className: '.macxim-Svg--%f',
+        fontSize: 26
       })
     )
     .pipe( cssFilter )
@@ -83,7 +83,7 @@ gulp.task('svgsymbol', function () {
     .pipe( cssFilter.restore )
     .pipe( svgFilter )
     .pipe( require('gulp-rename')('svg-symbols.svg') )
-    .pipe( gulp.dest('img') ) // save template
+    .pipe( gulp.dest('../_includes') ) // save template
 
 });
 

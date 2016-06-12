@@ -2038,6 +2038,55 @@ green     #E2EAB0  operators, other keywords
 .highlight .vg { color: #268bd2 } /* Name.Variable.Global */
 .highlight .vi { color: #268bd2 } /* Name.Variable.Instance */
 .highlight .il { color: #2aa198 } /* Literal.Number.Integer.Long */
+.macxim-Svg--codepen {
+  width: 1.231em;
+  height: 1.231em;
+}
+
+.macxim-Svg--external-link {
+  width: 1.231em;
+  height: 1.231em;
+}
+
+.macxim-Svg--facebook {
+  width: 1.231em;
+  height: 1.231em;
+}
+
+.macxim-Svg--github {
+  width: 1.231em;
+  height: 1.231em;
+}
+
+.macxim-Svg--instagram {
+  width: 1.231em;
+  height: 1.231em;
+}
+
+.macxim-Svg--linkedin {
+  width: 1.231em;
+  height: 1.231em;
+}
+
+.macxim-Svg--skype {
+  width: 1.231em;
+  height: 1.231em;
+}
+
+.macxim-Svg--spotify {
+  width: 1.231em;
+  height: 1.231em;
+}
+
+.macxim-Svg--twitter {
+  width: 1.231em;
+  height: 1em;
+}
+
+.macxim-Svg--whatsapp {
+  width: 1.231em;
+  height: 1.231em;
+}
 
 /**
 * customise recipes
@@ -2297,4 +2346,9 @@ blockquote{
   font-size: 1.1232rem;
   border-left: 5px solid rgb(232, 97, 0);
   background-color: #F5F5F5;
+}
+
+
+.site-footer{
+  text-align: center;
 }
