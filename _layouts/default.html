@@ -21,7 +21,7 @@ layout: typo
     {% endfor %}
 
     <link rel="alternate" href="/rss.xml" type="application/rss+xml" />
-    <link rel="stylesheet" href="/assets/dist/index.css">
+    <link rel="stylesheet" href="/assets/css/dist/index.css">
   </head>
 
   <body>
@@ -41,10 +41,9 @@ layout: typo
       </ul>
     </div>
 
-    <div class="jumbotron">
-      <h1 class="jumbotron__title {% if page.url == site.t[page.lang].url %}limited-visibility{% endif %}">{{ page.title }}</h1>
-    </div>
     <div class="r-Grid">
+      <h1 class="page__title {% if page.url == site.t[page.lang].url %}limited-visibility{% endif %}">{{ page.title }}</h1>
+
       <div class="r-Grid-cell">
         <article class="article r-VerticalRhythm {% if page.type != 'pages' %}post-content{% endif %}">
           {% if page.type != 'pages' %}

@@ -10,10 +10,8 @@
 @import "cssrecipes-utils/lib/all.css";
 @import "cssrecipes-utils/lib/min.css";
 
-/**
-* Fonts
-*/
 @import "typo.css";
+@import "highlight.css";
 
 /**
 * customise recipes
@@ -149,22 +147,20 @@ a:hover{
     border-width: 3px;
   }
 
-.jumbotron{
 
+.page__title{
+  position: relative;
+  padding: 0 1rem;
+  margin-top: -4rem;
+  font-size: calc(var(--r-h1-fontSize) * 1.5);
+  line-height: calc(var(--r-h1-lineHeight) * 1.5);
+  text-shadow: 0px .05rem .1rem rgba(0, 0, 0, .65);
+  text-align: center;
+  z-index: 2;
 }
-  .jumbotron__title{
-    position: relative;
-    padding: 0 1rem;
-    margin-top: -4rem;
-    font-size: calc(var(--r-h1-fontSize) * 1.5);
-    line-height: calc(var(--r-h1-lineHeight) * 1.5);
-    text-shadow: 0px .05rem .1rem rgba(0, 0, 0, .65);
-    text-align: center;
-    z-index: 2;
-  }
-  .jumbotron__title.limited-visibility{
-    margin-top: 2rem;
-  }
+.page__title.limited-visibility{
+  margin-top: 2rem;
+}
 
 
 .page__photo-credit{

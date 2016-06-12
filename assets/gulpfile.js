@@ -26,7 +26,7 @@ function handleError(err){
 // CSS files compilation
 gulp.task('css', function () {
 
-  return gulp.src('css/index.css')
+  return gulp.src('css/src/index.css')
     .pipe(postcss([
       require("postcss-import")(),
       require("postcss-url")(),
@@ -35,7 +35,7 @@ gulp.task('css', function () {
       require("postcss-reporter")(),
     ]))
     .pipe(gulpif(argv.production, postcss([require("cssnano")()])))
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('css/dist/'))
 });
 
 
