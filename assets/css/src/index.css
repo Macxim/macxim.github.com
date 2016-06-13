@@ -253,4 +253,24 @@ blockquote{
 
 .site-footer{
   text-align: center;
+  padding: 6rem 0;
+  opacity: .6;
+  transition: opacity .3s ease-in-out;
+}
+
+.site-footer:hover{
+  opacity: 1;
+}
+
+.footer__icon{
+  margin: 0 1rem;
+}
+
+.footer__icon .macxim-Svg-icon{
+  fill: var(--secondary-Color);
+  transition: fill .3s ease-in-out;
+}
+
+.footer__icon:hover .macxim-Svg-icon{
+  fill: var(--primary-Color);
 }

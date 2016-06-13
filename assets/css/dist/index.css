@@ -2351,4 +2351,28 @@ blockquote{
 
 .site-footer{
   text-align: center;
+  padding: 96px 0;
+  padding: 6rem 0;
+  opacity: .6;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.site-footer:hover{
+  opacity: 1;
+}
+
+.footer__icon{
+  margin: 0 16px;
+  margin: 0 1rem;
+}
+
+.footer__icon .macxim-Svg-icon{
+  fill: #2c3e50;
+  -webkit-transition: fill .3s ease-in-out;
+  transition: fill .3s ease-in-out;
+}
+
+.footer__icon:hover .macxim-Svg-icon{
+  fill: #E86100;
 }
