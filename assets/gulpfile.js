@@ -59,8 +59,8 @@ gulp.task('svgsymbol', function () {
         /<defs>.*<\/defs>/gi,
         / +sketch:type=\"MSShapeGroup\"/gi,
         / +sketch:type=\"MSPage\"/gi,
-        / +sketch:type=\"MSLayerGroup\"/gi,
-        / fill=\".*\"/gi,
+        / +sketch:type=\"MSLayerGroup\"/gi
+//        / fill=\".*\"/gi,
       ], function( regex ) {
         fileString = fileString.replace(regex, '')
       })
