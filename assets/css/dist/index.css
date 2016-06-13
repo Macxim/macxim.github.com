@@ -2068,6 +2068,11 @@ green     #E2EAB0  operators, other keywords
   height: 1.231em;
 }
 
+.macxim-Svg--pocket {
+  width: 1.231em;
+  height: 1.115em;
+}
+
 .macxim-Svg--skype {
   width: 1.231em;
   height: 1.231em;
@@ -2323,6 +2328,19 @@ a:hover{
     font-size: 1.1232rem;
   }
 
+  .posts-list__item-title:hover .macxim-Svg--external-link path{
+    fill: #E86100;
+  }
+
+  .posts-list__item-title .macxim-Svg--external-link{
+    display: inline-block;
+    vertical-align: super;
+    margin-left: 8px;
+    margin-left: 0.5rem;
+    font-size: 9.676px;
+    font-size: 0.6048rem;
+  }
+
 .article{
   margin-bottom: 32px;
   margin-bottom: 2rem;
@@ -2367,12 +2385,9 @@ blockquote{
   margin: 0 1rem;
 }
 
-.footer__icon .macxim-Svg-icon{
+.footer__icon .macxim-Svg-icon:not(:hover) path{
   fill: #2c3e50;
   -webkit-transition: fill .3s ease-in-out;
   transition: fill .3s ease-in-out;
 }
 
-.footer__icon:hover .macxim-Svg-icon{
-  fill: #E86100;
-}
