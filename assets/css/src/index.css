@@ -229,6 +229,17 @@ a:hover{
     font-size: calc(var(--r-h2-fontSize) * 0.65);
   }
 
+  .posts-list__item-title:hover .macxim-Svg--external-link path{
+    fill: var(--primary-Color);
+  }
+
+  .posts-list__item-title .macxim-Svg--external-link{
+    display: inline-block;
+    vertical-align: super;
+    margin-left: 0.5rem;
+    font-size: calc(var(--r-h2-fontSize) * 0.35);
+  }
+
 .article{
   margin-bottom: 2rem;
 }
