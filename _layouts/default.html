@@ -25,7 +25,11 @@ layout: typo
   </head>
 
   <body>
-    <div class="site-header">
+    <div style="display: none;">
+      {% include svg-symbols.svg %}
+    </div>
+
+    <header class="site-header">
       <div class="site-header-overlay"></div>
       <a class="site-logo" href="{{ site.t[page.lang].url }}"><img src="/assets/img/macxim-logo.svg" alt=""></a>
       <ul class="site-nav">
@@ -39,22 +43,37 @@ layout: typo
           <li class="site-lang__item {{ post.lang }}"><a href="{{ post.url }}">{{ post.lang }}</a></li>
         {% endfor %}
       </ul>
-    </div>
+    </header>
 
-    <div class="r-Grid">
+    <main class="r-Grid">
       <h1 class="page__title {% if page.url == site.t[page.lang].url %}limited-visibility{% endif %}">{{ page.title }}</h1>
 
       <div class="r-Grid-cell">
         <article class="article r-VerticalRhythm {% if page.type != 'pages' %}post-content{% endif %}">
           {% if page.type != 'pages' %}
           <p class="post-date">
-              {% include date.html date=page.date %}
+            {% include date.html date=page.date %}
           </p>
           {% endif %}
           {{ content }}
         </article>
       </div>
-    </div>
+    </main>
+
+    <footer class="site-footer r-Grid">
+      <div class="r-Grid-cell">
+        <a class="footer__icon" href="https://www.facebook.com/maxime.laforet"><svg class="macxim-Svg-icon macxim-Svg--facebook"><use xlink:href="#macxim-Svg--facebook" /></svg></a>
+        <a class="footer__icon" href="https://twitter.com/macxim"><svg class="macxim-Svg-icon macxim-Svg--twitter"><use xlink:href="#macxim-Svg--twitter" /></svg></a>
+        <a class="footer__icon" href="https://github.com/macxim/"><svg class="macxim-Svg-icon macxim-Svg--github"><use xlink:href="#macxim-Svg--github" /></svg></a>
+        <a class="footer__icon" href="https://www.linkedin.com/in/maximelaforet"><svg class="macxim-Svg-icon macxim-Svg--linkedin"><use xlink:href="#macxim-Svg--linkedin" /></svg></a>
+        <a class="footer__icon" href="https://www.instagram.com/macx1m/"><svg class="macxim-Svg-icon macxim-Svg--instagram"><use xlink:href="#macxim-Svg--instagram" /></svg></a>
+        <a class="footer__icon" href="skype:maxime.laforet?userinfo"><svg class="macxim-Svg-icon macxim-Svg--skype"><use xlink:href="#macxim-Svg--skype" /></svg></a>
+        <a class="footer__icon" href="https://play.spotify.com/user/mac_xim"><svg class="macxim-Svg-icon macxim-Svg--spotify"><use xlink:href="#macxim-Svg--spotify" /></svg></a>
+        <a class="footer__icon" href="http://codepen.io/Macxim/"><svg class="macxim-Svg-icon macxim-Svg--codepen"><use xlink:href="#macxim-Svg--codepen" /></svg></a>
+        <a class="footer__icon" href="tel:+32476386877"><svg class="macxim-Svg-icon macxim-Svg--whatsapp"><use xlink:href="#macxim-Svg--whatsapp" /></svg></a>
+      </div>
+    </footer>
+
     <div class="page__photo-credit">
       {% if photoCreditUrl != empty %}
         <a href="{{ page.photoCreditUrl }}" target="_blank">{{ site.t[page.lang].photoCredit }} {{ page.photoCreditName }}</a>

@@ -1,7 +1,10 @@
 permalink: /:title/
-markdown: redcarpet
-redcarpet:
-  extensions: ['smart', 'superscript', 'strikethrough']
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
 gems:
   - jekyll-redirect-from
 
