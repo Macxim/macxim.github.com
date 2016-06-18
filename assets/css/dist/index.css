@@ -2053,6 +2053,11 @@ green     #E2EAB0  operators, other keywords
   height: 1.231em;
 }
 
+.macxim-Svg--foursquare {
+  width: 0.923em;
+  height: 1.269em;
+}
+
 .macxim-Svg--github {
   width: 1.231em;
   height: 1.231em;
@@ -2071,6 +2076,11 @@ green     #E2EAB0  operators, other keywords
 .macxim-Svg--pocket {
   width: 1.231em;
   height: 1.115em;
+}
+
+.macxim-Svg--senscritique {
+  width: 1em;
+  height: 1.231em;
 }
 
 .macxim-Svg--skype {
@@ -2383,11 +2393,28 @@ blockquote{
 .footer__icon{
   margin: 0 16px;
   margin: 0 1rem;
+  display: inline-block;
 }
+
+.footer__icon .macxim-Svg-icon{
+    width: 48px;
+    width: 3rem;
+    height: 48px;
+    height: 3rem;
+    margin: 8px 0;
+    margin: .5rem 0
+}
+
+@media (min-width: 50.01em) {
+
+  .footer__icon .macxim-Svg-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  }
 
 .footer__icon .macxim-Svg-icon:not(:hover) path{
   fill: #2c3e50;
   -webkit-transition: fill .3s ease-in-out;
   transition: fill .3s ease-in-out;
 }
-
