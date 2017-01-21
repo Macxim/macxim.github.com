@@ -13,7 +13,6 @@ layout: default
         <span class="posts-list__item-date">{% include date.html date=post.date %}</span>
         <p class="posts-list__item-excerpt">
           <a class="posts-list__item-title" href="{% if post.external %}{{ post.external.url }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}{% if post.external %}<svg class="macxim-Svg-icon macxim-Svg--external-link"><use xlink:href="#macxim-Svg--external-link" /></svg>{% endif %}</a>
-          {{ post.excerpt | markdownify | strip_html }}
         </p>
       </li>
       {% endfor %}
