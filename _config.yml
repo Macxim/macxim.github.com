@@ -1,5 +1,7 @@
 permalink: /:title/
 
+future: true
+
 markdown: kramdown
 kramdown:
   input: GFM
