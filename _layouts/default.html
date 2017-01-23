@@ -13,7 +13,7 @@ layout: typo
 
     <link rel="icon" href="/assets/img/favicon.ico" />
 
-    {% assign posts=site.posts | where:"date", page.date %}
+    {% assign posts=site.posts | where:"name", page.name %}
     {% for post in posts %}
       {% if post.lang != page.lang %}
         <link rel="alternate" hreflang="{{post.lang}}" href="{{post.url}}" />
