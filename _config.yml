@@ -1,14 +1,9 @@
 permalink: /:title/
 
-future: true
-
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-
-gems:
-  - jekyll-redirect-from
 
 exclude: ["assets/node_modules", "vendor"]
 
