@@ -1,6 +1,7 @@
 ---
 title: Nueva página, ¡hola Jekyll!
 name: hello
+lang: es
 ---
 
 Por fin he tenido algo de tiempo para trabajar en mi página. Al final me decidí a pasar de WordPress a [Jekyll](https://github.com/mojombo/jekyll/). Después de leer un montón de artículos sobre Jekyll, pensé: "¿Por qué no?". La razón principal es que quería aprender algo nuevo.

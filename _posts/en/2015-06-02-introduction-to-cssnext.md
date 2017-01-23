@@ -1,6 +1,7 @@
 ---
 title: Introduction to cssnext
 name: introduction-cssnext
+lang: en
 photoCreditName: 
 photoCreditUrl:
 

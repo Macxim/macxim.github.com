@@ -1,6 +1,7 @@
 ---
 title: Two years in review
 name: two-years
+lang: en
 photoCreditName: bahamamelly
 photoCreditUrl: https://www.flickr.com/photos/bahahamelly/14900306241
 ---

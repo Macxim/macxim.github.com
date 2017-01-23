@@ -1,6 +1,7 @@
 ---
 title: Introducción a cssnext
 name: introduccion-cssnext
+lang: es
 photoCreditName: Matt Clark
 photoCreditUrl: https://www.flickr.com/photos/frinky/620935482
 ---
