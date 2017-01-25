@@ -1,7 +1,9 @@
 ---
 title: Nouveau site, bonjour Jekyll !
+type: posts
 name: hello
 lang: fr
+layout: default
 ---
 
 J'ai finalement trouvé un peu de temps pour travailler sur mon site web. J'ai décidé de passer de WordPress à [Jekyll](https://github.com/mojombo/jekyll/). La principale raison à cela est que je voulais apprendre quelque chose de nouveau. J'ai commencé à lire pas mal d'articles sur Jekyll et j'ai pensé : "Pourquoi pas?"

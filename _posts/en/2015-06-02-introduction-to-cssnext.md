@@ -1,7 +1,9 @@
 ---
 title: Introduction to cssnext
+type: posts
 name: introduction-cssnext
 lang: en
+layout: default
 photoCreditName: 
 photoCreditUrl:
 

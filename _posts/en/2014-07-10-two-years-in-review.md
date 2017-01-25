@@ -1,7 +1,9 @@
 ---
 title: Two years in review
+type: posts
 name: two-years
 lang: en
+layout: default
 photoCreditName: bahamamelly
 photoCreditUrl: https://www.flickr.com/photos/bahahamelly/14900306241
 ---

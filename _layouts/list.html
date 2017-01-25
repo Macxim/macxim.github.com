@@ -5,7 +5,7 @@ layout: default
 <section class="r-Grid">
   <div class="r-Grid-cell">
     <ul class="posts-list">
-      {% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
+      {% assign posts=site.posts | where:"lang", page.lang | where:"type", "posts" %}
       {% for post in posts %}
       <li class="posts-list__item">
         <span class="posts-list__item-date">{% include date.html date=post.date %}</span>
