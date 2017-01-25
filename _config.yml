@@ -32,6 +32,9 @@ nav:
     about:
       title: "About"
       url:   "/about/"
+    projects:
+      title: "Projects"
+      url:   "/projects"
   fr:
     blog:
       title: "Notes"
@@ -39,6 +42,9 @@ nav:
     about:
       title: "À propos"
       url:   "/a-propos/"
+    projects:
+      title: "Projets"
+      url:   "/projets"
   es:
     blog:
       title: "Notas"
@@ -46,6 +52,9 @@ nav:
     about:
       title: "Sobre mí"
       url:   "/sobre-mi/"
+    projects:
+      title: "Proyectos"
+      url:   "/proyectos"
 
 t:
   en:
