@@ -5,25 +5,47 @@ kramdown:
   input: GFM
   hard_wrap: false
 
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
+
 exclude: ["assets/node_modules", "vendor"]
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       lang: en
       layout: default
-  -
-    scope:
+  - scope:
       path: _posts/fr
     values:
       lang: fr
-  -
-    scope:
+  - scope:
       path: _posts/es
     values:
       lang: es
+
+  - scope:
+      path: _projects/en
+      type: project
+    values:
+      lang: en
+      layout: default
+
+  - scope:
+      path: _projects/fr
+      type: projects
+    values:
+      lang: fr
+
+  - scope:
+      path: _projects/es
+      type: projects
+    values:
+      lang: es
+
 nav:
   en:
     blog:
