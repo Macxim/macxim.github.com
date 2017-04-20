@@ -1,0 +1,9 @@
+---
+title: Proyectos
+layout: listprojects
+name: projects
+lang: es
+type: pages
+photoCreditName: Jo Andy
+photoCreditUrl: https://www.flickr.com/photos/lacygentlywaftingcurtains/31753433634/
+---
