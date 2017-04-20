@@ -1,6 +1,6 @@
 ---
 title: EU Specialty Food Ingredients
-lang: en
+lang: es
 type: collections
 siteUrl: https://www.specialtyfoodingredients.eu/
 img: /assets/img/projects/euspecialtyfoodingredients/logo.png
