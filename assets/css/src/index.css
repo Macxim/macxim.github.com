@@ -266,14 +266,14 @@ a:hover{
 
 .project-caption:after {
   position: absolute;
-  top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 30px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   content: '';
   opacity: 0;
   transition: opacity 0.35s, transform 0.35s;
-  background-color: color(#000 a(60%));
+  background: linear-gradient(to bottom, rgba(0,0,0,.9) 40%,rgba(0,0,0,0) 100%);
 }
 
 .project-caption:after {
@@ -289,10 +289,12 @@ a:hover{
 .posts-list__item--project-desc {
   opacity: 0;
   transition: opacity 0.15s, transform 0.35s;
-  margin-bottom: 0 !important;
   position: absolute;
-  left: 50%;
+  padding: 0.8em;
+  left: 0;
+  right: 0;
   top: 50%;
+  transform: translateY(-50%);
 }
 
 .posts-list__item--project:hover .project-caption:after {
@@ -302,12 +304,40 @@ a:hover{
 
 .posts-list__item--project:hover .posts-list__item--project-desc {
   opacity: 1;
-  transform: translate(-50%, -50%);
   z-index: 1;
   color: #fff;
   text-align: center;
 }
 
+.project-link{
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.project-tag-list{
+  margin: 0;
+  margin-bottom: 0 !important;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.project-tag{
+  display: inline-block;
+  flex-wrap: wrap;
+  padding: 2px 6px;
+  margin: 2px 3px;
+  background-color: rgba(0,0,0,.85);
+  border-radius: 2px;
+  font-size: calc(var(--r-h2-fontSize) * 0.45);
+  line-height: initial;
+  text-transform: uppercase;
+}
 
 .article{
   margin-bottom: 2rem;
