@@ -2340,6 +2340,97 @@ a:hover{
     font-size: 0.6048rem;
   }
 
+.posts-list--projects{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px inset rgba(84, 87, 89, 0.05);
+}
+
+.posts-list__item--project{
+  position: relative;
+  height: 200px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.posts-list__item--project:hover .project-img{
+  opacity: 0.4;
+}
+
+.project-img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.project-caption{
+  overflow: hidden;
+}
+
+.project-caption:after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.project-caption:after {
+  -webkit-transform: scale(1,0);
+          transform: scale(1,0);
+}
+
+/*.posts-list__item--project-title {
+  padding-top: 30%;
+  transition: transform 0.35s;
+  transform: translate3d(0,-20px,0);
+}*/
+
+.posts-list__item--project-desc {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s, -webkit-transform 0.35s;
+  transition: opacity 0.15s, -webkit-transform 0.35s;
+  transition: opacity 0.15s, transform 0.35s;
+  transition: opacity 0.15s, transform 0.35s, -webkit-transform 0.35s;
+  margin-bottom: 0 !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.posts-list__item--project:hover .project-caption:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.posts-list__item--project:hover .posts-list__item--project-desc {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+
+
 .article{
   margin-bottom: 32px;
   margin-bottom: 2rem;

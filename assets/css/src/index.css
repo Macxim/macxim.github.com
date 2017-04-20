@@ -233,6 +233,82 @@ a:hover{
     font-size: calc(var(--r-h2-fontSize) * 0.35);
   }
 
+.posts-list--projects{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px inset color(#545759 a(5%));
+}
+
+.posts-list__item--project{
+  position: relative;
+  height: 200px;
+  flex-grow: 1;
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.posts-list__item--project:hover .project-img{
+  opacity: 0.4;
+}
+
+.project-img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project-caption{
+  overflow: hidden;
+}
+
+.project-caption:after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+  background-color: color(#000 a(60%));
+}
+
+.project-caption:after {
+  transform: scale(1,0);
+}
+
+/*.posts-list__item--project-title {
+  padding-top: 30%;
+  transition: transform 0.35s;
+  transform: translate3d(0,-20px,0);
+}*/
+
+.posts-list__item--project-desc {
+  opacity: 0;
+  transition: opacity 0.15s, transform 0.35s;
+  margin-bottom: 0 !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.posts-list__item--project:hover .project-caption:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.posts-list__item--project:hover .posts-list__item--project-desc {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+
+
 .article{
   margin-bottom: 2rem;
 }
