@@ -10,7 +10,7 @@ tags:
   - CSS3
   - JavaScript
   - ES2015
-  - <audio> element
+  - Audio
 date: 2017-03-10
 ---
 
