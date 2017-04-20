@@ -1,0 +1,17 @@
+---
+title: JavaScript Audio Player
+lang: en
+type: collections
+siteUrl: http://macx.im/js-audio-player/
+img: /assets/img/projects/js-audio-player/logo.png
+color: A0875C
+tags:
+  - HTML5
+  - CSS3
+  - JavaScript
+  - ES2015
+  - <audio> element
+date: 2017-03-10
+---
+
+Audio player with HTML5 <audio> element controlled by JavaScript
