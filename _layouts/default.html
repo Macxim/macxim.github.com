@@ -85,7 +85,7 @@ layout: typo
       {% endif %}
     </div>
 
-  <style>.site-header{background-image: url('/assets/img/headers/{{ page.date | date:'%Y-%m-%d' }}.jpg');}</style>
+  <style>.site-header{background-image: url('/assets/img/headers/{{ page.date | date:'%Y-%m-%d' }}.jpg'); {% if page.background-position-y %} background-position-y: {{ page.background-position-y }}; {% endif %}}</style>
   <script>{% include script.js %}</script>
   </body>
 </html>

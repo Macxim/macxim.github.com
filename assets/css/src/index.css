@@ -35,6 +35,8 @@
 }
 
 :root {
+  --r-Grid-baseFontSize:       1.15rem;
+  --r-fontSizeUnit:            1.15rem;
   --primary-Color:             #E86100;
   --secondary-Color:           #2c3e50;
 }
@@ -206,7 +208,7 @@ a:hover{
     text-transform: uppercase;
     min-width: 13em;
     margin-right: 2em;
-    font-size: calc(var(--r-h2-fontSize) * 0.45);
+    font-size: calc(var(--r-h2-fontSize) * 0.35);
   }
   @media (--r-minM) {
     .posts-list__item-date{
@@ -219,7 +221,7 @@ a:hover{
   }
   .posts-list__item-title{
     display: block;
-    font-size: calc(var(--r-h2-fontSize) * 0.65);
+    font-size: calc(var(--r-h2-fontSize) * 0.55);
   }
 
   .posts-list__item-title:hover .macxim-Svg--external-link path{
