@@ -517,10 +517,10 @@ body {
 }
 
 .r-VerticalRhythm {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 25px;
-  line-height: 1.5625rem;
+  font-size: 18.4px;
+  font-size: 1.15rem;
+  line-height: 28.75px;
+  line-height: 1.79688rem;
 }
 .r-VerticalRhythm h1,
 .r-VerticalRhythm .h1,
@@ -546,14 +546,14 @@ body {
  */
 .r-VerticalRhythm h1,
 .r-VerticalRhythm .h1 {
-  font-size: 33.177px;
-  font-size: 2.0736rem;
-  line-height: 50px;
-  line-height: 3.125rem;
-  padding-top: 6.5px;
-  padding-top: 0.40625rem;
-  margin-bottom: 18.5px;
-  margin-bottom: 1.15625rem;
+  font-size: 38.154px;
+  font-size: 2.38464rem;
+  line-height: 57.5px;
+  line-height: 3.59376rem;
+  padding-top: 7.475px;
+  padding-top: 0.46719rem;
+  margin-bottom: 21.275px;
+  margin-bottom: 1.32969rem;
 }
 
 /**
@@ -564,14 +564,14 @@ body {
  */
 .r-VerticalRhythm h2,
 .r-VerticalRhythm .h2 {
-  font-size: 27.648px;
-  font-size: 1.728rem;
-  line-height: 25px;
-  line-height: 1.5625rem;
-  padding-top: 6.5px;
-  padding-top: 0.40625rem;
-  margin-bottom: 18.5px;
-  margin-bottom: 1.15625rem;
+  font-size: 31.795px;
+  font-size: 1.9872rem;
+  line-height: 28.75px;
+  line-height: 1.79688rem;
+  padding-top: 7.475px;
+  padding-top: 0.46719rem;
+  margin-bottom: 21.275px;
+  margin-bottom: 1.32969rem;
 }
 
 /**
@@ -582,14 +582,14 @@ body {
  */
 .r-VerticalRhythm h3,
 .r-VerticalRhythm .h3 {
-  font-size: 23.04px;
-  font-size: 1.44rem;
-  line-height: 25px;
-  line-height: 1.5625rem;
-  padding-top: 6.5px;
-  padding-top: 0.40625rem;
-  margin-bottom: 18.5px;
-  margin-bottom: 1.15625rem;
+  font-size: 26.496px;
+  font-size: 1.656rem;
+  line-height: 28.75px;
+  line-height: 1.79688rem;
+  padding-top: 7.475px;
+  padding-top: 0.46719rem;
+  margin-bottom: 21.275px;
+  margin-bottom: 1.32969rem;
 }
 
 /**
@@ -600,14 +600,14 @@ body {
  */
 .r-VerticalRhythm h4,
 .r-VerticalRhythm .h4 {
-  font-size: 19.2px;
-  font-size: 1.2rem;
-  line-height: 25px;
-  line-height: 1.5625rem;
-  padding-top: 6.5px;
-  padding-top: 0.40625rem;
-  margin-bottom: 18.5px;
-  margin-bottom: 1.15625rem;
+  font-size: 22.08px;
+  font-size: 1.38rem;
+  line-height: 28.75px;
+  line-height: 1.79688rem;
+  padding-top: 7.475px;
+  padding-top: 0.46719rem;
+  margin-bottom: 21.275px;
+  margin-bottom: 1.32969rem;
 }
 
 /**
@@ -618,14 +618,14 @@ body {
  */
 .r-VerticalRhythm h5,
 .r-VerticalRhythm .h5 {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 25px;
-  line-height: 1.5625rem;
-  padding-top: 6.5px;
-  padding-top: 0.40625rem;
-  margin-bottom: 18.5px;
-  margin-bottom: 1.15625rem;
+  font-size: 18.4px;
+  font-size: 1.15rem;
+  line-height: 28.75px;
+  line-height: 1.79688rem;
+  padding-top: 7.475px;
+  padding-top: 0.46719rem;
+  margin-bottom: 21.275px;
+  margin-bottom: 1.32969rem;
 }
 
 /**
@@ -636,14 +636,14 @@ body {
  */
 .r-VerticalRhythm h6,
 .r-VerticalRhythm .h6 {
-  font-size: 13.333px;
-  font-size: 0.83333rem;
-  line-height: 25px;
-  line-height: 1.5625rem;
-  padding-top: 6.5px;
-  padding-top: 0.40625rem;
-  margin-bottom: 18.5px;
-  margin-bottom: 1.15625rem;
+  font-size: 15.333px;
+  font-size: 0.95833rem;
+  line-height: 28.75px;
+  line-height: 1.79688rem;
+  padding-top: 7.475px;
+  padding-top: 0.46719rem;
+  margin-bottom: 21.275px;
+  margin-bottom: 1.32969rem;
 }
 
 /* since h5 & h6 always small, it's interesting to have a difference with classic text */
@@ -670,8 +670,8 @@ body {
 .r-VerticalRhythm fieldset,
 .r-VerticalRhythm hr {
   margin-top: 0;
-  margin-bottom: 25px;
-  margin-bottom: 1.5625rem;
+  margin-bottom: 28.75px;
+  margin-bottom: 1.79688rem;
 }
 /* vertical rhythm helper */
 
@@ -689,9 +689,9 @@ body {
   bottom: 0;
   left: 0;
 
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .25) 1px, transparent 1px) 0 0 / 100% 1.5625rem,     -webkit-linear-gradient(top, rgba(0, 0, 0, 0.16749999999999998), transparent 1px) 0 0.78125rem / 100% 1.5625rem,     -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 0.39063rem / 100% 1.5625rem,     -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 1.17188rem / 100% 1.5625rem;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, .25) 1px, transparent 1px) 0 0 / 100% 1.79688rem,     -webkit-linear-gradient(top, rgba(0, 0, 0, 0.16749999999999998), transparent 1px) 0 0.89844rem / 100% 1.79688rem,     -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 0.44922rem / 100% 1.79688rem,     -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 1.34766rem / 100% 1.79688rem;
 
-  background: linear-gradient(to bottom, rgba(0, 0, 0, .25) 1px, transparent 1px) 0 0 / 100% 1.5625rem,     linear-gradient(to bottom, rgba(0, 0, 0, 0.16749999999999998), transparent 1px) 0 0.78125rem / 100% 1.5625rem,     linear-gradient(to bottom, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 0.39063rem / 100% 1.5625rem,     linear-gradient(to bottom, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 1.17188rem / 100% 1.5625rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .25) 1px, transparent 1px) 0 0 / 100% 1.79688rem,     linear-gradient(to bottom, rgba(0, 0, 0, 0.16749999999999998), transparent 1px) 0 0.89844rem / 100% 1.79688rem,     linear-gradient(to bottom, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 0.44922rem / 100% 1.79688rem,     linear-gradient(to bottom, rgba(0, 0, 0, 0.08499999999999999), transparent 1px) 0 1.34766rem / 100% 1.79688rem;
 }
 :root { /* minor third ratio */ /* depend on fontSize*/ /* depend on fontSize*/ /* depend on fontSize*/ /* depend on fontSize*/ /* depend on fontSize*/ /* depend on fontSize*/
 
@@ -708,8 +708,8 @@ body {
     .r-Grid--withGutter > .r-Grid-cell { padding: 0 8px; padding: 0 0.5rem }
 
   .r-Grid-cell {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 18.4px;
+    font-size: 1.15rem;
     width: 100%;
     padding: 0;
   }
@@ -1921,8 +1921,8 @@ blockquote{
   display: block;
   padding: 16px;
   padding: 1rem;
-  font-size: 17.971px;
-  font-size: 1.1232rem;
+  font-size: 20.666px;
+  font-size: 1.29168rem;
   border-left: 5px solid rgb(232, 97, 0);
   background-color: #F5F5F5;
 }
@@ -2248,10 +2248,10 @@ a:hover{
   padding: 0 1rem;
   margin-top: -64px;
   margin-top: -4rem;
-  font-size: 49.766px;
-  font-size: 3.1104rem;
-  line-height: 75px;
-  line-height: 4.6875rem;
+  font-size: 57.231px;
+  font-size: 3.57696rem;
+  line-height: 86.25px;
+  line-height: 5.39064rem;
   text-shadow: 0px 0.8px 1.6px rgba(0, 0, 0, .65);
   text-shadow: 0px .05rem .1rem rgba(0, 0, 0, .65);
   text-align: center;
@@ -2276,8 +2276,8 @@ a:hover{
   color: rgba(241, 242, 243, 0.3);
   padding: 2.4px 9.6px;
   padding: .15rem .6rem;
-  font-size: 11.333px;
-  font-size: 0.70833rem;
+  font-size: 13.033px;
+  font-size: 0.81458rem;
   text-decoration: none;
   opacity: .7;
 }
@@ -2292,8 +2292,8 @@ a:hover{
 .post-date{
   text-align: center;
   color: #2c3e50;
-  font-size: 13.824px;
-  font-size: 0.864rem;
+  font-size: 15.897px;
+  font-size: 0.9936rem;
 }
 
 .posts-list{
@@ -2309,8 +2309,8 @@ a:hover{
     text-transform: uppercase;
     min-width: 13em;
     margin-right: 2em;
-    font-size: 12.441px;
-    font-size: 0.7776rem;
+    font-size: 11.128px;
+    font-size: 0.69552rem;
   }
   @media (min-width: 50.01em) {
     .posts-list__item-date{
@@ -2323,8 +2323,8 @@ a:hover{
   }
   .posts-list__item-title{
     display: block;
-    font-size: 17.971px;
-    font-size: 1.1232rem;
+    font-size: 17.487px;
+    font-size: 1.09296rem;
   }
 
   .posts-list__item-title:hover .macxim-Svg--external-link path{
@@ -2336,8 +2336,8 @@ a:hover{
     vertical-align: super;
     margin-left: 8px;
     margin-left: 0.5rem;
-    font-size: 9.676px;
-    font-size: 0.6048rem;
+    font-size: 11.128px;
+    font-size: 0.69552rem;
   }
 
 .posts-list--projects{
@@ -2465,8 +2465,8 @@ a:hover{
   margin: 2px 3px;
   background-color: rgba(0, 0, 0, .85);
   border-radius: 2px;
-  font-size: 12.441px;
-  font-size: 0.7776rem;
+  font-size: 14.307px;
+  font-size: 0.89424rem;
   line-height: normal;
   line-height: initial;
   text-transform: uppercase;
@@ -2491,8 +2491,8 @@ blockquote{
   display: block;
   padding: 16px;
   padding: 1rem;
-  font-size: 17.971px;
-  font-size: 1.1232rem;
+  font-size: 20.666px;
+  font-size: 1.29168rem;
   border-left: 5px solid rgb(232, 97, 0);
   background-color: #F5F5F5;
 }
