@@ -235,6 +235,12 @@ a:hover{
     font-size: calc(var(--r-h2-fontSize) * 0.35);
   }
 
+  .posts-list__item--micros{
+    margin-bottom: 3.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 2px dashed color(#8c8b8b a(30%));;
+  }
+
 .posts-list--projects{
   display: flex;
   flex-wrap: wrap;

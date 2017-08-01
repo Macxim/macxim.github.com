@@ -2340,6 +2340,12 @@ a:hover{
     font-size: 0.69552rem;
   }
 
+  .posts-list__item--micros{
+    margin-bottom: 3.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 2px dashed rgba(140, 139, 139, 0.3);;
+  }
+
 .posts-list--projects{
   display: -webkit-box;
   display: -ms-flexbox;
