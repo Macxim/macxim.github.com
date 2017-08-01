@@ -9,6 +9,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+  react-movie-app:
+    output: true
+    permalink: /:collection/:title/
 
 exclude: ["assets/node_modules", "vendor"]
 
@@ -24,25 +27,6 @@ defaults:
       lang: fr
   - scope:
       path: _posts/es
-    values:
-      lang: es
-
-  - scope:
-      path: _projects/en
-      type: project
-    values:
-      lang: en
-      layout: default
-
-  - scope:
-      path: _projects/fr
-      type: projects
-    values:
-      lang: fr
-
-  - scope:
-      path: _projects/es
-      type: projects
     values:
       lang: es
 

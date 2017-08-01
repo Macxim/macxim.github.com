@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<main class="r-Grid">
+  <div class="r-Grid-cell">
+    <article class="article r-VerticalRhythm {% if page.type != 'pages' %}post-content{% endif %}">
+      {{ content }}
+    </article>
+  </div>
+</main>
+
+<section class="r-Grid">
+  <div class="r-Grid-cell">
+    <ul class="posts-list">
+      {% assign reactmoviePosts=site.react-movie-app | where:"lang", page.lang | where:"type", "collections" %}
+      {% for reactmoviePost in reactmoviePosts reversed %}
+      <li class="posts-list__item posts-list__item--micros">
+        <span class="posts-list__item-date">{% include date.html date=reactmoviePost.date %} — <a href="#{{ forloop.index0 }}">{{ forloop.index0 }}</a></span>
+        <div class="posts-list__item-excerpt">
+          {{ reactmoviePost.content | markdownify }}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
