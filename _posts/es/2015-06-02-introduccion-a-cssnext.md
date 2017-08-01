@@ -9,6 +9,7 @@ photoCreditUrl: https://www.flickr.com/photos/frinky/620935482
 ---
 
 Según la [página oficial](http://cssnext.io/):
+
 > **cssnext** es un _transpiler_ que permite utilizar desde hoy la sintaxis CSS del mañana y transformar las especificaciones CSS que aún no están implementadas en los navegadores más populares en CSS compatible.
 
 ## ¿Qué significa esto exactamente?
@@ -39,17 +40,17 @@ Ante todo, es conveniente consultar el [playground en la página oficial](http:/
 
 ### Prefijos de navegadores (vendor prefixes) automáticos
 
-```css
+{% highlight css %}
 
 .h1 {
   transform: skewX(25deg);
   transition: transform 1s;
 }
-```
+{% endhighlight %}
 
 Esto será transformado por **cssnext** gracias a Autoprefixer en:
 
-```css
+{% highlight css %}
 .h1 {
   -webkit-transform: skewX(25deg);
       -ms-transform: skewX(25deg);
@@ -57,21 +58,21 @@ Esto será transformado por **cssnext** gracias a Autoprefixer en:
   -webkit-transition: -webkit-transform 1s;
           transition: transform 1s;
 }
-```
+{% endhighlight %}
 ### Propiedades personalizadas y var() limitadas a `:root`
 
 También conocidas como las tan esperadas [variables CSS](http://www.w3.org/TR/css-variables/).
 
-```css
+{% highlight css %}
 :root {
   --primary-Color:                 #E86100;
   --secondary-Color:               #2c3e50;
   --r-Grid-baseFontSize:           1rem;
 }
-```
+{% endhighlight %}
 Podéis usarlas de esta manera:
 
-```css
+{% highlight css %}
 .h1 {
   color: var(--primary-Color);
 }
@@ -81,69 +82,69 @@ Podéis usarlas de esta manera:
 body {
   font-size: var(--r-Grid-baseFontSize);
 }
-```
+{% endhighlight %}
 
 ### Media Queries personalizadas
 
 Para crear alias semánticos, claros y sencillos ([aquí tenéis la documentación](http://dev.w3.org/csswg/mediaqueries/#custom-mq)).
 
-```css
+{% highlight css %}
 @custom-media --viewport-medium (width <= 40rem);
 @custom-media --viewport-large (max-width: 50em);
-```
+{% endhighlight %}
 
 Uso:
 
-```css
+{% highlight css %}
 @media (--viewport-medium) {
   body { font-size: calc(var(--fontSize) * 1.2); }
 }
 @media (--viewport-large) {
   body { font-size: calc(var(--fontSize) * 1.4); }
 }
-```
+{% endhighlight %}
 
 Por ejemplo, digamos que:
 
-```css
+{% highlight css %}
 :root {
   --fontSize: 1.2rem;
 }
-```
+{% endhighlight %}
 
 El código generado sera el siguiente:
 
-```css
+{% highlight css %}
 @media (max-width: 40rem) {
   body { font-size: 1.44rem; }
 }
 @media (max-width: 50em) {
   body { font-size: 1.68rem; }
 }
-```
+{% endhighlight %}
 
 ### Selectores personalizados
 
 Primero, podéis echar un ojo a las [especificaciones](http://dev.w3.org/csswg/css-extensions/#custom-selectors).
 Pongamos que queremos aplicar estilos a todos los títulos:
 
-```css
+{% highlight css %}
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
 
 :--heading {
   margin-top: 0;
 }
-```
+{% endhighlight %}
 Esto va a generar el código siguiente:
 
-```css
+{% highlight css %}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 { margin-top; 0; }
-```
+{% endhighlight %}
 
 ### `color()`
 
@@ -151,7 +152,7 @@ Una sencilla [función color](http://dev.w3.org/csswg/css-color/#modifying-color
 
 Ejemplos:
 
-```css
+{% highlight css %}
 .class {
   background-color: color(#2B88E6);
   color: color(#2B88E6 red(+30) green(-50) blue(6%) alpha(.65));
@@ -160,10 +161,10 @@ Ejemplos:
   border-bottom-color: color(#2B88E6 tint(80%));
   border-left-color: color(#2B88E6 shade(75%));
 }
-```
+{% endhighlight %}
 Este código de arriba será transformado en:
 
-```css
+{% highlight css %}
 .class {
   background-color: rgb(43, 136, 230);
   color: rgba(73, 86, 15, 0.65);
@@ -172,7 +173,7 @@ Este código de arriba será transformado en:
   border-bottom-color: rgb(213, 231, 250);
   border-left-color: rgb(11, 34, 58);
 }
-```
+{% endhighlight %}
 
 **cssnext** también ofrece las siguientes funciones relacionadas con los colores:
 
@@ -180,59 +181,59 @@ Este código de arriba será transformado en:
 
 Según las [especificaciones](http://dev.w3.org/csswg/css-color/#the-hwb-notation), HWB (Tono-Blancura-Negrura - _Hue-Whiteness-Blackness_) es similar a HSL, pero resulta más fácil de uso para los humanos.
 
-```css
+{% highlight css %}
 .title {
   color: hwb(125, 32%, 47%);
 }
-```
+{% endhighlight %}
 
 Resultado:
 
-```css
+{% highlight css %}
 .title {
   color: rgb(33, 135, 42);
 }
-```
+{% endhighlight %}
 
 #### gray()
 
 Los grises son tan [guays](http://dev.w3.org/csswg/css-color/#grays) que tienen incluso una función dedicada.
 
-```css
+{% highlight css %}
 .section {
   background-color: gray(120, 50%);
   border-color: gray(17%, 25%);
 }
-```
+{% endhighlight %}
 
 Esto dará como resultado:
 
-```css
+{% highlight css %}
 .section {
   background-color: rgba(120, 120, 120, 0.5);
   border-color: rgba(43, 43, 43, 0.25);
 }
-```
+{% endhighlight %}
 
 #### #rrggbbaa
 
 **cssnext** transforma la [notación hexadecimal](http://dev.w3.org/csswg/css-color/#hex-notation) #RRGGBBAA y #RGBA en rgba().
 
-```css
+{% highlight css %}
 body {
   color: #5c69;
   background-color: #C73D5C59;
 }
-```
+{% endhighlight %}
 
 Resultado:
 
-```css
+{% highlight css %}
 body {
   color: rgba(85, 204, 102, 0.6);
   background-color: rgba(199, 61, 92, 0.34902);
 }
-```
+{% endhighlight %}
 
 #### rebeccapurple
 
@@ -242,7 +243,7 @@ Transforma el color [`rebeccapurple`](https://github.com/postcss/postcss-color-r
 
 ¡Un _nuevo_ mundo de [modificaciones de imágenes](http://www.w3.org/TR/filter-effects/) se abre ante vosotros!
 
-```css
+{% highlight css %}
 .awesome-Image {
   filter: sepia(.7) hue-rotate(23deg);
 }
@@ -250,11 +251,11 @@ Transforma el color [`rebeccapurple`](https://github.com/postcss/postcss-color-r
 .awesome-Picture {
   filter: blur(8px);
 }
-```
+{% endhighlight %}
 
 Lo anterior será transformado en:
 
-```css
+{% highlight css %}
 .awesome-Image {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.5751000000000001 0.5383 0.1323 0 0 0.24429999999999996 0.7802000000000001 0.11760000000000001 0 0 0.1904 0.3738 0.39170000000000005 0 0 0 0 0 1 0" /><feColorMatrix type="hueRotate" color-interpolation-filters="sRGB" values="23" /></filter></svg>#filter');
   -webkit-filter: sepia(.7) hue-rotate(23deg);
@@ -266,26 +267,27 @@ Lo anterior será transformado en:
   -webkit-filter: blur(8px);
           filter: blur(8px);
 }
-```
+{% endhighlight %}
 
 ### Unidades rem
 
 Nada extraordinario aquí, se genera un **_fallback_ en píxeles para las unidades en rem**.
 Oh, ¡por favor! ¿De verdad necesitáis un ejemplo para esto? Venga, aquí tenéis.
 
-```css
+{% highlight css %}
 .section-Highlight {
   font-size: 2.5rem;
 }
-```
+{% endhighlight %}
+
 Resultado:
 
-```css
+{% highlight css %}
 .section-Highlight {
   font-size: 40px;
   font-size: 2.5rem;
 }
-```
+{% endhighlight %}
 
 ## Funciones adicionales
 
@@ -303,7 +305,7 @@ Como ya habréis adivinado, se trata solo una opción para comprimir _o no_ vues
 
 Debajo os dejo un ejemplo básico de estas dos funciones. He usado [gulp-cssnext](https://github.com/cssnext/gulp-cssnext), uno de los [numerosos plugins](http://cssnext.io/setup/) que os puede ayudar a empezar con **cssnext**.
 
-```js
+{% highlight javascript %}
 var gulp = require('gulp'),
     cssnext = require("gulp-cssnext");
 
@@ -315,11 +317,11 @@ gulp.task('styles', function() {
   .pipe(gulp.dest("./dist/"))
 });
 
-```
+{% endhighlight %}
 
 Después, en mi archivo `index.css`, obtendría lo siguiente:
 
-```css
+{% highlight css %}
 
 @import "normalize.css"; /* == @import "./node_modules/normalize.css/index.css"; */
 @import "cssrecipes-defaults"; /* == @import "./node_modules/cssrecipes-defaults/index.css"; */
@@ -327,11 +329,11 @@ Después, en mi archivo `index.css`, obtendría lo siguiente:
 @import "typo"; /* mismo nivel que mi index.css principal, situado en css/ */
 @import "highlight" (min-width: 25em);
 
-```
+{% endhighlight %}
 
 Y el resultado final es:
 
-```css
+{% highlight css %}
 
 /* contenido de ./node_modules/normalize.css/index.css */
 /* contenido de ./node_modules/cssrecipes-defaults/index.css */
@@ -340,7 +342,7 @@ Y el resultado final es:
 @media (min-width: 25em) {
   /* contenido de highlight.css */
 }
-```
+{% endhighlight %}
 
 Conozco esa sensación. Vosotros también os habéis enamorado. :)
 
