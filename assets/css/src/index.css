@@ -69,8 +69,7 @@
   background-image: linear-gradient(to bottom, color(#FFF a(0.6)) 10%, color(#FFF a(1)) 100%);
 }
 
-a,
-a:visited {
+a{
   position: relative;
   color: color(var(--primary-Color));
   text-decoration: underline;
@@ -238,7 +237,7 @@ a:hover{
   .posts-list__item--micros{
     margin-bottom: 3.5em;
     padding-bottom: 1.5em;
-    border-bottom: 2px dashed color(#8c8b8b a(30%));;
+    border-bottom: 2px dashed color(#8c8b8b a(30%));
   }
 
 .posts-list--projects{
@@ -398,4 +397,27 @@ blockquote{
 .footer__icon .macxim-Svg-icon:not(:hover) path{
   fill: var(--secondary-Color);
   transition: fill .3s ease-in-out;
+}
+
+
+.button{
+  background: linear-gradient(35deg, #434343 0%, #000000 100%);
+  color: #FFF;
+  padding: 0.5em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.button:hover{
+  background: linear-gradient(-35deg, #434343 0%, #000000 100%);
+  color: #FFF;
+  background-position: 100% 50%
+}
+
+.button-rma{
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  position: relative;
 }

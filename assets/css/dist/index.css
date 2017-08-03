@@ -2153,8 +2153,7 @@ green     #E2EAB0  operators, other keywords
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 10%, rgb(255, 255, 255) 100%);
 }
 
-a,
-a:visited {
+a{
   position: relative;
   color: rgb(232, 97, 0);
   text-decoration: underline;
@@ -2343,7 +2342,7 @@ a:hover{
   .posts-list__item--micros{
     margin-bottom: 3.5em;
     padding-bottom: 1.5em;
-    border-bottom: 2px dashed rgba(140, 139, 139, 0.3);;
+    border-bottom: 2px dashed rgba(140, 139, 139, 0.3);
   }
 
 .posts-list--projects{
@@ -2544,4 +2543,29 @@ blockquote{
   fill: #2c3e50;
   -webkit-transition: fill .3s ease-in-out;
   transition: fill .3s ease-in-out;
+}
+
+
+.button{
+  background: -webkit-linear-gradient(55deg, #434343 0%, #000000 100%);
+  background: linear-gradient(35deg, #434343 0%, #000000 100%);
+  color: #FFF;
+  padding: 0.5em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.button:hover{
+  background: -webkit-linear-gradient(125deg, #434343 0%, #000000 100%);
+  background: linear-gradient(-35deg, #434343 0%, #000000 100%);
+  color: #FFF;
+  background-position: 100% 50%
+}
+
+.button-rma{
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  position: relative;
 }
