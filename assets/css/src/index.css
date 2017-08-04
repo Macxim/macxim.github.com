@@ -401,7 +401,7 @@ blockquote{
 
 
 .button{
-  background: linear-gradient(35deg, #434343 0%, #000000 100%);
+  background: linear-gradient(35deg, #434343 0%, #222b31 100%);
   color: #FFF;
   padding: 0.5em 1.5em;
   text-align: center;
@@ -410,14 +410,31 @@ blockquote{
 }
 
 .button:hover{
-  background: linear-gradient(-35deg, #434343 0%, #000000 100%);
+  background: linear-gradient(-35deg, #434343 0%, #222b31 100%);
   color: #FFF;
   background-position: 100% 50%
 }
 
-.button-rma{
+.button-rma,
+.button-rma-gh{
   display: block;
   margin: 0 auto;
   width: 40%;
-  position: relative;
+}
+
+.button-rma-gh{
+  background: linear-gradient(35deg, #e53b47 0%, #cc343f 100%);
+}
+
+.button-rma-gh svg{
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.button-rma-gh svg path{
+  fill: white;
+}
+
+.button ~ .button {
+  margin-top: 2px;
 }
