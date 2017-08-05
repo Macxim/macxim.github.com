@@ -12,5 +12,5 @@ photoCreditUrl: https://unsplash.com/photos/4SLz_RCk6kQ?utm_source=unsplash&utm_
 
 Below is a list of micro posts that describe the progress of the project. 
 
-<a class="button button-rma" href="https://eiga-de72c.firebaseapp.com/">🎬 Check out the app 🎬</a>
+<a class="button button-rma" href="https://eiga.macx.im/">🎬 Check out the app 🎬</a>
 <a class="button button-rma-gh" href="https://github.com/macxim/eiga"><svg class="macxim-Svg-icon macxim-Svg--github"><use xlink:href="#macxim-Svg--github"></use></svg> Check out the code <svg class="macxim-Svg-icon macxim-Svg--github"><use xlink:href="#macxim-Svg--github"></use></svg></a>
