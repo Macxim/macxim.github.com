@@ -424,7 +424,14 @@ blockquote{
 .button-rma-gh{
   display: block;
   margin: 0 auto;
-  width: 40%;
+
+}
+
+@media (--r-minM) {
+  .button-rma,
+  .button-rma-gh{
+    width: 40%;
+  }
 }
 
 .button-rma-gh{

@@ -2573,7 +2573,14 @@ blockquote{
 .button-rma-gh{
   display: block;
   margin: 0 auto;
-  width: 40%;
+
+}
+
+@media (min-width: 50.01em) {
+  .button-rma,
+  .button-rma-gh{
+    width: 40%;
+  }
 }
 
 .button-rma-gh{
