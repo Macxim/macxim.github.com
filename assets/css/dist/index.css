@@ -2122,6 +2122,11 @@ green     #E2EAB0  operators, other keywords
   }
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 .limited-visibility{
   position: absolute;
   width: 1px;
