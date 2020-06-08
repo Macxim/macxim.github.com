@@ -1,7 +1,0 @@
-.DS_Store
-.jekyll-metadata
-_site/
-vendor
-.bundle/config
-Gemfile.lock
-assets/nodes_modules/
