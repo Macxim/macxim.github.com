@@ -7,7 +7,7 @@
     "copy:public": "mkdir dist && cp src/CNAME dist/CNAME",
     "dev": "parcel src/*.html",
     "prod": "parcel build src/*.html",
-    "deploy": "yarn prod && gh-pages -d dist -b master"
+    "deploy": "yarn copy:public && yarn prod && gh-pages -d dist -b master"
   },
   "repository": "https://github.com/macxim.github.io",
   "author": "Maxime Laforet",
